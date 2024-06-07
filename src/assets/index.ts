@@ -1,0 +1,1 @@
+export {default as LogoBlack} from "./logo/logo-black.svg";
