@@ -1,5 +1,3 @@
-"use client";
-
 import { ConnectionImage } from "@/assets";
 import React from "react";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
