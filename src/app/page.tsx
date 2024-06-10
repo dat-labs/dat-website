@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <GettingStarted />
-      <Companies />
+      {/* <Companies /> */}
       <Intro />
       <UnStructuredLlms />
       <DatFlow />
