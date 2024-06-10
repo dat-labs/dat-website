@@ -1,11 +1,11 @@
-import Companies from "@/components/client-components/companies";
-import Conversation from "@/components/client-components/conversation";
-import DatFlow from "@/components/client-components/dat-flow";
-import DiversitySource from "@/components/client-components/diversity-sources";
-import Footer from "@/components/client-components/footer";
-import GettingStarted from "@/components/client-components/getting-started";
-import Intro from "@/components/client-components/intro";
-import UnStructuredLlms from "@/components/client-components/unstructured-llms";
+import Companies from "@/components/server-components/companies";
+import Conversation from "@/components/server-components/conversation";
+import DatFlow from "@/components/server-components/dat-flow";
+import DiversitySource from "@/components/server-components/diversity-sources";
+import Footer from "@/components/server-components/footer";
+import GettingStarted from "@/components/server-components/getting-started";
+import Intro from "@/components/server-components/intro";
+import UnStructuredLlms from "@/components/server-components/unstructured-llms";
 
 export default function Home() {
   return (
