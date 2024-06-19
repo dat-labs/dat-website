@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigationBar from "@/components/client-components/top-navigation-bar";
+import Footer from "@/components/server-components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,24 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-center border-b-2" >
-          <div className="w-full max-w-screen-xl">
+        <div className="flex justify-center border-b-2">
+          <div className="w-full">
             <TopNavigationBar />
           </div>
         </div>
-        <div className="flex justify-center box-border">
-          <div className="w-full max-w-screen-xl">
-            {children}
+        <div className="flex justify-center box-border w-full">
+          <div className="w-full">
+            <div className="flex justify-center">
+              <div className="w-11/12 lg:w-8/12">{children}</div>
+            </div>
           </div>
         </div>
-        {/* <div style={{display: "grid", gridTemplateColumns: "2fr 8fr 2fr"}}>
-          <div></div>
-          <div>
-            <TopNavigationBar/>
-            {children}
-          </div>
-          <div></div>
-        </div> */}
+        <Footer />
       </body>
     </html>
   );
