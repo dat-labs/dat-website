@@ -30,7 +30,7 @@ const Footer = () => {
                 width={25}
                 height={25}
                 src="https://cdn.icon-icons.com/icons2/2428/PNG/512/github_black_logo_icon_147128.png"
-                alt="slack logo"
+                alt="github logo"
               />
               <Image
                 width={25}

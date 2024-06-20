@@ -8,7 +8,7 @@ import UnStructuredLlms from "@/components/server-components/unstructured-llms";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-11/12 lg:w-8/12">
       <GettingStarted />
       <Intro />
       <UnStructuredLlms />

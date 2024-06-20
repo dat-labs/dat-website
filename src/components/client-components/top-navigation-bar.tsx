@@ -16,22 +16,52 @@ import {
 import { LogoBlack } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import Image from "next/image";
 
 const navConfig = [
   {
     title: "Explore Integrations",
     href: "/explore-integrations",
     links: [
-      { title: "Link 1", href: "/link1", description: "Link 1 description" },
-      { title: "Link 2", href: "/link2", description: "Link 2 description" },
+      {
+        title: "Sources",
+        href: "/link1",
+        description: "Explore all of our sources",
+      },
+      {
+        title: "Generators",
+        href: "/link2",
+        description: "Explore all of our generators",
+      },
+      {
+        title: "Destinations",
+        href: "/link2",
+        description: "Explore all of our destinations",
+      },
     ],
   },
   {
     title: "Resources",
     href: "/resources",
     links: [
-      { title: "Link 1", href: "/link1", description: "Link 1 description" },
-      { title: "Link 2", href: "/link2", description: "Link 2 description" },
+      {
+        title: "Github",
+        href: "/link1",
+        description: "View the github repository",
+      },
+      { title: "Slack", href: "/link2", description: "Join our slack channel" },
     ],
   },
   {
@@ -42,60 +72,132 @@ const navConfig = [
 
 const TopNavigationBar = () => {
   return (
-    <div>
-      <div className="flex items-center justify-between px-4 py-2">
-        <Link href="/">
-          <LogoBlack className="h-10 w-24" />
-        </Link>
+    <div className="flex justify-center">
+      <div className="w-11/12 lg:w-8/12">
+        <div className="flex items-center justify-between px-4 py-2">
+          <Link href="/">
+            <LogoBlack className="h-10 w-24" />
+          </Link>
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            {navConfig.map((nav, index) => (
-              <React.Fragment key={index}>
-                {nav.links ? (
-                  <NavigationMenuItem key={`nav-item-${index}`}>
-                    <NavigationMenuTrigger>{nav.title}</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {nav.links &&
-                          nav.links.map((link, linkIndex) => (
-                            <ListItem
-                              key={`nav-link-${index}-${linkIndex}`}
-                              title={link.title}
-                              href={link.href}
-                            >
-                              {link.description}
-                            </ListItem>
-                          ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ) : (
-                  <NavigationMenuItem key={`nav-item-${index}`}>
-                    <Link href={nav.href} legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        {nav.title}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                )}
-              </React.Fragment>
-            ))}
-          </NavigationMenuList>
-          <div className="flex gap-4 ml-8">
-            <Button className="rounded">
-              <ArrowTopRightIcon className="mr-2" /> Documentation
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded [background:#611F69] px-[10px)] text-white text-base font-medium p-4"
-            >
-              Join Slack
-            </Button>
+          <div className="hidden lg:inline">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {navConfig.map((nav, index) => (
+                  <React.Fragment key={index}>
+                    {nav.links ? (
+                      <NavigationMenuItem key={`nav-item-${index}`}>
+                        <NavigationMenuTrigger>
+                          {nav.title}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="p-4 w-[30vw]">
+                            {nav.links &&
+                              nav.links.map((link, linkIndex) => (
+                                <ListItem
+                                  key={`nav-link-${index}-${linkIndex}`}
+                                  title={link.title}
+                                  href={link.href}
+                                >
+                                  {link.description}
+                                </ListItem>
+                              ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    ) : (
+                      <NavigationMenuItem key={`nav-item-${index}`}>
+                        <Link href={nav.href} legacyBehavior passHref>
+                          <NavigationMenuLink
+                            className={navigationMenuTriggerStyle()}
+                          >
+                            {nav.title}
+                          </NavigationMenuLink>
+                        </Link>
+                      </NavigationMenuItem>
+                    )}
+                  </React.Fragment>
+                ))}
+              </NavigationMenuList>
+              <div className="flex gap-4 ml-8">
+                <Button className="rounded">
+                  <ArrowTopRightIcon className="mr-2" /> Documentation
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded [background:#611F69] px-[10px)] text-white text-base font-medium p-4"
+                >
+                  <Image
+                    src="/assets/slack.png"
+                    alt="slack image"
+                    width={20}
+                    height={20}
+                    className="m-2"
+                  />
+                  Join Slack
+                </Button>
+              </div>
+            </NavigationMenu>
           </div>
-        </NavigationMenu>
+          <div className="inline lg:hidden">
+            <Drawer>
+              <DrawerTrigger asChild>
+                <Button size="icon" variant="ghost">
+                  <HamburgerMenuIcon className="h-6 w-6" />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <div className="mx-auto w-full max-w-sm h-full mb-12">
+                  <div className="p-4 pb-0">
+                    <div className="flex flex-wrap">
+                      {navConfig.map((navItem) => (
+                        <div key={navItem.title} className="w-full mt-4">
+                          <p className="text-xl font-semibold">
+                            {navItem.title}
+                          </p>
+                          <div className="ml-4">
+                            {navItem.links?.map((link) => (
+                              <p
+                                key={link.title}
+                                className="text-muted-foreground mt-3"
+                              >
+                                {link.title}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div
+                    className="h-[1px] mt-12 mb-12 rounded-sm"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(90deg, #EEEEEE 0%, #888888 50%, #EEEEEE 100%)",
+                    }}
+                  ></div>
+                  <div className="flex gap-4 ml-8">
+                    <Button className="rounded">
+                      <ArrowTopRightIcon className="mr-2" /> Documentation
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="rounded [background:#611F69] px-[10px)] text-white p-4"
+                    >
+                      <Image
+                        src="/assets/slack.png"
+                        alt="slack image"
+                        width={20}
+                        height={20}
+                        className="m-2"
+                      />
+                      Join Slack
+                    </Button>
+                  </div>
+                </div>
+              </DrawerContent>
+            </Drawer>
+          </div>
+        </div>
       </div>
     </div>
   );

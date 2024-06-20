@@ -39,7 +39,7 @@ const DatFlow = () => {
       ></div>
       <div>
         <div className="flex items-center mt-12 flex-wrap">
-          <div className="lg:w-6/12 w-full p-10">
+          <div className="lg:w-6/12 w-full lg:p-10">
             <p className="text-2xl text-muted-foreground">STEP 1</p>
             <p className="text-3xl font-semibold">Connect</p>
             <p className="text-md text-muted-foreground">
@@ -60,7 +60,7 @@ const DatFlow = () => {
               </video>
             )}
           </div>
-          <div className="lg:w-6/12 w-full p-10 flex-wrap">
+          <div className="lg:w-6/12 w-full lg:p-10 flex-wrap mt-12 lg:mt-0">
             <p className="text-2xl text-muted-foreground">STEP 2</p>
             <p className="text-3xl font-semibold">Embed</p>
             <p className="text-md text-muted-foreground">
@@ -70,7 +70,7 @@ const DatFlow = () => {
           </div>
         </div>
         <div className="flex items-center mt-16 flex-wrap">
-          <div className="lg:w-6/12 w-full p-10">
+          <div className="lg:w-6/12 w-full lg:p-10">
             <p className="text-2xl text-muted-foreground">STEP 3</p>
             <p className="text-3xl font-semibold">Store</p>
             <p className="text-md text-muted-foreground">
@@ -86,7 +86,7 @@ const DatFlow = () => {
           <div className="lg:w-6/12 w-full">
             <ScheduleAndMonitor className="h-full w-full" />
           </div>
-          <div className="lg:w-6/12 w-full p-10">
+          <div className="lg:w-6/12 w-full lg:p-10 mt-12 lg:mt-0">
             <p className="text-2xl text-muted-foreground">STEP 4</p>
             <p className="text-3xl font-semibold">Schedule & Monitor</p>
             <p className="text-md text-muted-foreground">

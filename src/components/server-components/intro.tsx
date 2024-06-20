@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { WhatDat1 } from "@/assets";
+import { WhatDat1, LoadPopularVectors, RAG, Security } from "@/assets";
 
 const Intro = () => {
   return (
@@ -50,26 +50,26 @@ const Intro = () => {
             </CardContent>
           </Card>
         </div>
-        <div className="lg:w-3/12 w-12/12 lg:mt-20 p-3">
+        <div className="lg:w-3/12 w-12/12 lg:mt-16 p-3">
           <Card>
             <CardHeader className="p-4">
               <CardTitle>
                 <div className="flex gap-2 items-center">
                   <div>
                     <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                      <WhatDat1 className="h-6 w-6" />
+                      <LoadPopularVectors className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <p>Extract Unstructured data</p>
+                    <p>Load to Popular Vector Stores</p>
                   </div>
                 </div>
               </CardTitle>
             </CardHeader>
             <CardContent className="pl-6 pr-6">
               <p className="text-xs">
-                Breaking down silos and enabling seamless integration with any
-                vector database and LLM frameworks.
+                Build your own connector and collaborate with growing DAT’s
+                community for assistance and queries.
               </p>
             </CardContent>
           </Card>
@@ -81,43 +81,45 @@ const Intro = () => {
                 <div className="flex gap-2 items-center">
                   <div>
                     <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                      <WhatDat1 className="h-6 w-6" />
+                      <RAG className="h-4 w-4" />
                     </div>
                   </div>
                   <div>
-                    <p>Extract Unstructured data</p>
+                    <p>RAG specific transformations</p>
                   </div>
                 </div>
               </CardTitle>
             </CardHeader>
             <CardContent className="pl-6 pr-6">
               <p className="text-xs">
-                Breaking down silos and enabling seamless integration with any
-                vector database and LLM frameworks.
+                Protect your data with robust security features, including
+                encryption, access controls, and audit trails, ensuring
+                compliance and data integrity.
               </p>
             </CardContent>
           </Card>
         </div>
-        <div className="lg:w-3/12 w-12/12 lg:mt-20 p-3">
+        <div className="lg:w-3/12 w-12/12 lg:mt-16 p-3">
           <Card>
             <CardHeader className="p-4">
               <CardTitle>
                 <div className="flex gap-2 items-center">
                   <div>
                     <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                      <WhatDat1 className="h-6 w-6" />
+                      <Security className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <p>Extract Unstructured data</p>
+                    <p>Security</p>
                   </div>
                 </div>
               </CardTitle>
             </CardHeader>
             <CardContent className="pl-6 pr-6">
               <p className="text-xs">
-                Breaking down silos and enabling seamless integration with any
-                vector database and LLM frameworks.
+                Protect your data with robust security features, including
+                encryption, access controls, and audit trails, ensuring
+                compliance and data integrity.
               </p>
             </CardContent>
           </Card>

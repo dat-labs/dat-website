@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigationBar from "@/components/client-components/top-navigation-bar";
 import Footer from "@/components/server-components/footer";
+import { clsx } from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,19 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex justify-center border-b-2">
+      <body className={clsx(inter.className)}>
+        <div className="border-b-2">
           <div className="w-full">
             <TopNavigationBar />
           </div>
         </div>
-        <div className="flex justify-center box-border w-full">
-          <div className="w-full">
-            <div className="flex justify-center">
-              <div className="w-11/12 lg:w-8/12">{children}</div>
-            </div>
-          </div>
-        </div>
+        <div className="flex justify-center">{children}</div>
         <Footer />
       </body>
     </html>

@@ -6,7 +6,12 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["cdn.icon-icons.com", "cdn-icons-png.flaticon.com"],
+    domains: [
+      "cdn.icon-icons.com",
+      "cdn-icons-png.flaticon.com",
+      "toppng.com",
+      "static-00.iconduck.com",
+    ],
   },
   webpack(config) {
     config.module.rules.push({
