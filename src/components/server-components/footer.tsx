@@ -46,14 +46,14 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex gap-4">
-            <div className="w-4/12">
+          <div className="flex lg:flex-row flex-col gap-4">
+            <div className="lg:w-4/12">
               <p className="text-lg">EXPLORE CONNECTORS</p>
               <p className="text-muted-foreground text-md mt-3">Sources</p>
               <p className="text-muted-foreground text-md mt-3">Generators</p>
               <p className="text-muted-foreground text-md mt-3">Destination</p>
             </div>
-            <div className="w-4/12">
+            <div className="lg:w-4/12">
               <p className="text-lg">RESOURCES</p>
               <p className="text-muted-foreground text-md mt-3">
                 Documentation
@@ -61,7 +61,7 @@ const Footer = () => {
               <p className="text-muted-foreground text-md mt-3">Blogs</p>
               <p className="text-muted-foreground text-md mt-3">Newsletter</p>
             </div>
-            <div className="w-4/12">
+            <div className="lg:w-4/12">
               <p className="text-lg">ABOUT US</p>
               <p className="text-muted-foreground text-md mt-3">Contact Us</p>
               <p className="text-muted-foreground text-md mt-3">LinkedIn</p>

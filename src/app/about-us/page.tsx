@@ -7,7 +7,7 @@ function AboutUs() {
   return (
     <div>
         <BuildSomething />
-        <LovedByDevelopers />
+        {/* <LovedByDevelopers /> */}
         <MeetOurTeam />
         <GetInTouch />
     </div>
