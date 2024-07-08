@@ -1,18 +1,20 @@
 import { LogoBlack } from "@/assets";
 import Image from "next/image";
 import React from "react";
+import FooterDatLogoAsset from "@/assets/images/asset-footer.svg";
+
 const Footer = () => {
   return (
     <div>
-      <div
-        className="h-[1px] mt-12 mb-12 rounded-sm"
-        style={{
-          backgroundImage:
-            "linear-gradient(90deg, #EEEEEE 0%, #888888 50%, #EEEEEE 100%)",
-        }}
-      ></div>
+      <div className="relative">
+        <div className="absolute w-screen -top-5">
+          <div className="flex w-12/12 justify-center">
+            <FooterDatLogoAsset className="h-10 pl-2 pr-2" />
+          </div>
+        </div>
+      </div>
       <div className="flex justify-center mb-16">
-        <div className="lg:w-8/12 w-11/12 flex justify-between flex-wrap">
+        <div className="lg:w-8/12 w-11/12 p-6 lg:p-0 flex justify-between flex-wrap !pt-12">
           <div className="lg:w-4/12 w-12/12 mb-12 lg:mb-0">
             <LogoBlack className="h-10 w-24" />
             <p className="text-md mt-6 text-muted-foreground">

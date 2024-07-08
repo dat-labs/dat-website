@@ -25,7 +25,7 @@ export default function RootLayout({
             <TopNavigationBar />
           </div>
         </div>
-        <div className="flex justify-center">{children}</div>
+        <div className="flex justify-center bg-gray-50 pb-20">{children}</div>
         <Footer />
       </body>
     </html>

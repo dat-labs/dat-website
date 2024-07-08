@@ -6,7 +6,7 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 export default function ReadyToBuild() {
   return (
     <div className="mt-24 mb-2">
-      <div className="h-[410px] bg-[url('/assets/ready-to-build.svg')] bg-cover w-full p-10">
+      <div className="h-[410px] bg-[url('/assets/ready-to-build.svg')] bg-cover w-full p-10 rounded-3xl">
         <p className="text-3xl text-secondary font-semibold mt-10">
           Ready to build your
         </p>

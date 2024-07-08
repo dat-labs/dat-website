@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 
 const FormElements = [
   {
@@ -29,7 +29,7 @@ const FormElements = [
     required: true,
   },
   {
-    type: "text",
+    type: "email",
     name: "email",
     label: "E-Mail Address",
     description: "Please enter your email address.",
@@ -121,20 +121,22 @@ export function ContactUsForm() {
           <FormItem>
             <FormLabel>{field.label}</FormLabel>
             <FormControl>
-              {field.type === "text" ? (
+              {field.type === "text" || field.type === "email" ? (
                 <Input
-                placeholder={field.placeholder}
-                type={field.type}
-                {...hookFormField}
-              />) :
-              field.type === "textArea" && (
-                <Textarea
-                placeholder={field.placeholder}
-                className="resize-none"
-                {...field}
-              />)}
+                  placeholder={field.placeholder}
+                  type={field.type}
+                  {...hookFormField}
+                />
+              ) : (
+                field.type === "textArea" && (
+                  <Textarea
+                    placeholder={field.placeholder}
+                    className="resize-none"
+                    {...field}
+                  />
+                )
+              )}
             </FormControl>
-            <FormDescription>{field.description}</FormDescription>
             <FormMessage />
           </FormItem>
         )}

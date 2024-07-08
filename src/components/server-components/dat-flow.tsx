@@ -38,7 +38,7 @@ const DatFlow = () => {
         }}
       ></div>
       <div>
-        <div className="flex items-center mt-12 flex-wrap">
+        <div className="flex items-center mt-12 flex-wrap border-l-4 border-rose-200 border-b-4 pb-12 rounded-bl-3xl">
           <div className="lg:w-6/12 w-full lg:p-10">
             <p className="text-2xl text-muted-foreground">STEP 1</p>
             <p className="text-3xl font-semibold">Connect</p>
@@ -51,7 +51,7 @@ const DatFlow = () => {
             <ConnectImage className="h-full w-full" />
           </div>
         </div>
-        <div className="flex items-center mt-24 flex-wrap">
+        <div className="flex items-center flex-wrap border-rose-200 border-r-4 border-b-4 pt-12 pb-12 rounded-br-3xl">
           <div className="lg:w-6/12 w-full">
             {isClient && (
               <video autoPlay loop muted>
@@ -69,7 +69,7 @@ const DatFlow = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center mt-16 flex-wrap">
+        <div className="flex items-center flex-wrap border-rose-200 border-b-4 border-l-4 pt-12 pb-12 rounded-bl-3xl">
           <div className="lg:w-6/12 w-full lg:p-10">
             <p className="text-2xl text-muted-foreground">STEP 3</p>
             <p className="text-3xl font-semibold">Store</p>
@@ -82,7 +82,7 @@ const DatFlow = () => {
             <Image className="h-full w-full" src={DatGif} alt="dat-gif" />
           </div>
         </div>
-        <div className="flex items-center mt-16 flex-wrap">
+        <div className="flex items-center flex-wrap border-rose-200 border-r-4 pt-12 pb-12 ">
           <div className="lg:w-6/12 w-full">
             <ScheduleAndMonitor className="h-full w-full" />
           </div>
