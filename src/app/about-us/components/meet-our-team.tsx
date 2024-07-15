@@ -6,6 +6,7 @@ import {
   Ankit,
   Rupesh,
   Raghav,
+  LinkedIn,
 } from "@/assets";
 
 const teamMember = [
@@ -44,19 +45,24 @@ const teamMember = [
     name: "Raaghav Gaur",
     designation: "Associate Product Manager",
   },
+  {
+    icon: Raghav,
+    name: "Shivam Kashyap",
+    designation: "UX Designer",
+  },
 ];
 
 function MeetOurTeam() {
   return (
     <div className="[background:#1F1F1F] text-white lg:p-3  p-6">
       <div className="w-11/12 lg:w-8/12 mx-auto mt-4">
-        <h2 className="text-white lg:text-6xl text-4xl font-bold">
+        <h2 className="text-white lg:text-6xl text-4xl font-bold mb-4">
           Meet our Team
         </h2>
-        <h3 className="text-white lg:text-4xl text-2xl font-bold mb-2">
+        <h3 className="text-white lg:text-4xl text-2xl font-bold mb-4">
           Vision
         </h3>
-        <p className="text-lg text-zinc-400">
+        <p className="text-lg text-zinc-400 mb-4">
           Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
           fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
@@ -67,11 +73,17 @@ function MeetOurTeam() {
         <div className="grid lg:grid-cols-4 gap-4 p-8 text-zinc-400">
           {teamMember.map((member, index) => (
             <div key={index} className="flex flex-col">
-              <div className="lg:w-40 lg:h-40">
-                <member.icon className="w-full h-full"/>
+              <div className="lg:w-50 lg:h-50 mx-auto">
+                <member.icon className="w-full h-full" />
               </div>
-              <p>{member.name}</p>
-              <p>{member.designation}</p>
+
+              <div className="mx-auto px-3 text-center relative">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full size-12 bg-white rounded-full">
+                  <LinkedIn />
+                </div>
+                <p className="mt-2">{member.name}</p>
+                <p>{member.designation}</p>
+              </div>
             </div>
           ))}
         </div>

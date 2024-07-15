@@ -40,7 +40,7 @@ const FormElements = [
   {
     type: "text",
     name: "company",
-    label: "Company",
+    label: "Company (OPTIONAL)",
     description: "Please enter your company name.",
     placeholder: "Enter your company Name",
     message: "Company Name must be at least 2 characters.",
@@ -49,7 +49,7 @@ const FormElements = [
   {
     type: "text",
     name: "designation",
-    label: "Designation",
+    label: "Designation (Title)",
     description: "Please enter your designation.",
     placeholder: "Your current position in company",
     message: "Designation must be at least 2 characters.",
@@ -58,7 +58,7 @@ const FormElements = [
   {
     type: "text",
     name: "profile",
-    label: "LinkedIn Profile",
+    label: "LinkedIn Profile (OPTIONAL)",
     description: "Please enter your LinkedIn profile URL.",
     placeholder: "Mention your LinkedIn profile URL",
     message: "LinkedIn Profile must be at least 2 characters.",
@@ -119,7 +119,10 @@ export function ContactUsForm() {
         name={field.name}
         render={({ field: hookFormField }) => (
           <FormItem>
-            <FormLabel>{field.label}</FormLabel>
+            <FormLabel className="flex items-center gap-1">
+              {field.label}
+              {field.required && <p className="text-[#DC2626] text-lg">*</p>}
+            </FormLabel>
             <FormControl>
               {field.type === "text" || field.type === "email" ? (
                 <Input

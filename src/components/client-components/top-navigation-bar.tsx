@@ -13,11 +13,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { LogoBlack } from "@/assets";
+import { DiscordIcon, LogoBlack } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-
 import {
   Drawer,
   DrawerClose,
@@ -37,17 +36,17 @@ const navConfig = [
     links: [
       {
         title: "Sources",
-        href: "/link1",
+        href: "/integrations",
         description: "Explore all of our sources",
       },
       {
         title: "Generators",
-        href: "/link2",
+        href: "/integrations",
         description: "Explore all of our generators",
       },
       {
         title: "Destinations",
-        href: "/link2",
+        href: "/integrations",
         description: "Explore all of our destinations",
       },
     ],
@@ -58,10 +57,14 @@ const navConfig = [
     links: [
       {
         title: "Github",
-        href: "/link1",
+        href: "https://github.com/dat-labs/dat-website/tree/main",
         description: "View the github repository",
       },
-      { title: "Slack", href: "/link2", description: "Join our slack channel" },
+      {
+        title: "Discord",
+        href: "/link2",
+        description: "Join our Discord channel",
+      },
     ],
   },
   {
@@ -124,16 +127,10 @@ const TopNavigationBar = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded [background:#611F69] px-[10px)] text-white text-base font-medium p-4"
+                  className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4"
                 >
-                  <Image
-                    src="/assets/slack.png"
-                    alt="slack image"
-                    width={20}
-                    height={20}
-                    className="m-2"
-                  />
-                  Join Slack
+                  <DiscordIcon className="size-6" />
+                  <p>Join Discord</p>
                 </Button>
               </div>
             </NavigationMenu>
@@ -190,7 +187,7 @@ const TopNavigationBar = () => {
                         height={20}
                         className="m-2"
                       />
-                      Join Slack
+                      Join Discord
                     </Button>
                   </div>
                 </div>
