@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Conversation = () => {
   return (
@@ -12,8 +13,13 @@ const Conversation = () => {
             connect with fellow users and developers.
           </p>
           <div className="flex mt-6 gap-3">
-            <Button>Join Slack</Button>
-            <Button variant="outline">Join Github</Button>
+            <Link href={"https://discord.gg/En7TRBYE"}>
+              <Button>Join Discord</Button>
+            </Link>
+
+            <Link href={"https://github.com/dat-labs/dat-main"}>
+              <Button variant="outline">Join Github</Button>
+            </Link>
           </div>
         </div>
       </div>

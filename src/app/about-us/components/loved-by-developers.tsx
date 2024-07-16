@@ -1,6 +1,7 @@
 import { HeartHandshake, LinkedIn, Twitter } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { LovedByBuilders } from "@/assets";
+import Link from "next/link";
 
 function LovedByDevelopers() {
   return (
@@ -17,11 +18,13 @@ function LovedByDevelopers() {
           </p>
         </div>
         <div className="flex items-center">
-          <Button variant="outline" className="text-lg gap-2 h-12 shadow-md">
-            Connect with us over
-            <LinkedIn className="w-[34px] h-[34px]" />
-            <Twitter className="w-[34px] h-[34px]" />
-          </Button>
+          <Link href={"https://discord.gg/En7TRBYE"}>
+            <Button variant="outline" className="text-lg gap-2 h-12 shadow-md">
+              Connect with us over
+              <LinkedIn className="w-[34px] h-[34px]" />
+              <Twitter className="w-[34px] h-[34px]" />
+            </Button>
+          </Link>
         </div>
       </div>
 

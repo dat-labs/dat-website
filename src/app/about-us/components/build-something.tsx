@@ -1,5 +1,5 @@
 import { GitHubLogoIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import { DiscordBlueIcon, SlackIcon } from "@/assets";
+import { DiscordBlueIcon } from "@/assets";
 import { MailBoxIcon } from "@/assets";
 
 const community = [

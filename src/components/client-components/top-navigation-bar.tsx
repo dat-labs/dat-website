@@ -57,12 +57,12 @@ const navConfig = [
     links: [
       {
         title: "Github",
-        href: "https://github.com/dat-labs/dat-website/tree/main",
+        href: "https://github.com/dat-labs/dat-main",
         description: "View the github repository",
       },
       {
         title: "Discord",
-        href: "/link2",
+        href: "https://discord.gg/En7TRBYE",
         description: "Join our Discord channel",
       },
     ],
@@ -122,16 +122,17 @@ const TopNavigationBar = () => {
                 ))}
               </NavigationMenuList>
               <div className="flex gap-4 ml-8">
-                <Button className="rounded">
-                  <ArrowTopRightIcon className="mr-2" /> Documentation
-                </Button>
-                <Button
-                  variant="outline"
-                  className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4"
-                >
-                  <DiscordIcon className="size-6" />
-                  <p>Join Discord</p>
-                </Button>
+                <Link href={"https://datlabs.gitbook.io/datlabs"}>
+                  <Button className="rounded">
+                    <ArrowTopRightIcon className="mr-2" /> Documentation
+                  </Button>
+                </Link>
+                <Link href={"https://discord.gg/En7TRBYE"}>
+                  <Button className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4 hover:bg-[#5865F2] hover:opacity-90">
+                    <DiscordIcon className="size-6" />
+                    <p>Join Discord</p>
+                  </Button>
+                </Link>
               </div>
             </NavigationMenu>
           </div>

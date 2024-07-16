@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const DiversitySource = () => {
   return (
@@ -8,9 +9,11 @@ const DiversitySource = () => {
         <p className="text-3xl font-semibold">
           Diversity of <br /> sources
         </p>
-        <Button variant="outline" className="mt-6">
-          View All Connectors
-        </Button>
+        <Link href={"/integrations"}>
+          <Button variant="outline" className="mt-6">
+            View All Connectors
+          </Button>
+        </Link>
       </div>
     </div>
   );
