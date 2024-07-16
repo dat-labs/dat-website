@@ -8,47 +8,56 @@ import {
   Raghav,
   LinkedIn,
 } from "@/assets";
+import Link from "next/link";
 
 const teamMember = [
   {
     icon: Sandeep,
     name: "Sandeep Singh",
     designation: "Co-Founder & CTO",
+    linkedInId: "https://www.linkedin.com/in/sandeep-singh-a435b65/",
   },
   {
     icon: Aditya,
     name: "Aditya Sudan",
     designation: "Head of Product",
+    linkedInId: "https://www.linkedin.com/in/aditya-sudan-1a0729253/",
   },
   {
     icon: Rijumone,
     name: "Rijumone Chowdhary",
     designation: "Lead Developer",
+    linkedInId: "https://www.linkedin.com/in/rijumone/",
   },
   {
     icon: Rahul,
     name: "Rahul Kumar",
     designation: "Senior Developer",
+    linkedInId: "https://www.linkedin.com/in/rahul-kumar-b67b9280/",
   },
   {
     icon: Ankit,
     name: "Ankit Juneja",
     designation: "Senior Developer",
+    linkedInId: "https://www.linkedin.com/in/dev-ankitjuneja/",
   },
   {
     icon: Rupesh,
     name: "Rupesh",
     designation: "Developer",
+    linkedInId: "https://www.linkedin.com/in/rupesh-mishra-745102151/",
   },
   {
     icon: Raghav,
     name: "Raaghav Gaur",
     designation: "Associate Product Manager",
+    linkedInId: "https://www.linkedin.com/in/raaghav-gaur-b6637965/",
   },
   {
     icon: Raghav,
     name: "Shivam Kashyap",
     designation: "UX Designer",
+    linkedInId: "https://www.linkedin.com/in/shivam-kashyap-326796147/",
   },
 ];
 
@@ -79,7 +88,9 @@ function MeetOurTeam() {
 
               <div className="mx-auto px-3 text-center relative">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full size-12 bg-white rounded-full">
-                  <LinkedIn />
+                  <Link href={member.linkedInId}>
+                    <LinkedIn />
+                  </Link>
                 </div>
                 <p className="mt-2">{member.name}</p>
                 <p>{member.designation}</p>

@@ -15,14 +15,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-16">
-        <div className="lg:w-10/12 ml-10 w-11/12 py-6 lg:p-0 flex justify-between flex-wrap !pt-12">
+      <div className="flex flex-col lg:w-10/12 mx-auto w-11/12 py-6 lg:p-0 !pt-12 mb-10">
+        <div className="flex flex-row justify-between">
           <div className="lg:w-4/12 w-12/12 mb-12 lg:mb-0">
             <Link href={"/"}>
               <LogoBlack className="h-10 w-24" />
             </Link>
 
-            <p className="text-md mt-6 text-muted-foreground">
+            <p className="text-md mt-6 text-muted-foreground w-10/12">
               Seamlessly moving your data and making it accessible to any vector
               database and popular LLM (Large Language Model) frameworks.
             </p>
@@ -37,6 +37,7 @@ const Footer = () => {
               <LinkedIn className="size-10" />
             </div>
           </div>
+
           <div className="lg:w-5/12 flex lg:flex-row flex-col pl-16 space-x-8">
             <div className="lg:w-5/12 flex flex-col">
               <p className="text-md font-semibold">EXPLORE CONNECTORS</p>
@@ -105,6 +106,14 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-row justify-between w-full mt-32 text-xs text-zinc-400">
+          <p>© 2024 DAT. All rights reserved.</p>
+          <span className="flex flex-row space-x-2 mr-10">
+            <p>Term & Condition</p>
+            <p>Privacy Policy</p>
+          </span>
         </div>
       </div>
     </div>
