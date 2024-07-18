@@ -18,7 +18,11 @@ function LovedByDevelopers() {
           </p>
         </div>
         <div className="flex items-center">
-          <Link href={"https://discord.gg/En7TRBYE"}>
+          <Link
+            href={"https://discord.gg/En7TRBYE"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline" className="text-lg gap-2 h-12 shadow-md">
               Connect with us over
               <LinkedIn className="w-[34px] h-[34px]" />

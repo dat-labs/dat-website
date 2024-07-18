@@ -13,11 +13,19 @@ const Conversation = () => {
             connect with fellow users and developers.
           </p>
           <div className="flex mt-6 gap-3">
-            <Link href={"https://discord.gg/En7TRBYE"}>
+            <Link
+              href={"https://discord.gg/En7TRBYE"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button>Join Discord</Button>
             </Link>
 
-            <Link href={"https://github.com/dat-labs/dat-main"}>
+            <Link
+              href={"https://github.com/dat-labs/dat-main"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="outline">Join Github</Button>
             </Link>
           </div>

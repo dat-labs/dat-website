@@ -14,12 +14,20 @@ export default function ReadyToBuild() {
         own Data Movement Tool ?
       </p>
       <div className="flex gap-3 mt-5">
-        <Link href={"https://github.com/dat-labs/dat-main"}>
+        <Link
+          href={"https://github.com/dat-labs/dat-main"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button variant="secondary">
             <ArrowTopRightIcon className="mr-2 h-5 w-5" /> Try Dat
           </Button>
         </Link>
-        <Link href={"https://github.com/dat-labs/dat-main"}>
+        <Link
+          href={"https://github.com/dat-labs/dat-main"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button variant="secondary">
             <Image
               width={25}

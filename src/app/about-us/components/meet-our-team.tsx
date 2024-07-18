@@ -88,7 +88,11 @@ function MeetOurTeam() {
 
               <div className="mx-auto px-3 text-center relative">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full size-12 bg-white rounded-full">
-                  <Link href={member.linkedInId}>
+                  <Link
+                    href={member.linkedInId}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <LinkedIn />
                   </Link>
                 </div>

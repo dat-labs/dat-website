@@ -27,10 +27,18 @@ const Footer = () => {
               database and popular LLM (Large Language Model) frameworks.
             </p>
             <div className="flex mt-6 gap-4">
-              <Link href={"https://github.com/dat-labs/dat-main"}>
+              <Link
+                href={"https://github.com/dat-labs/dat-main"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GitHubLogoIcon className="size-10" />
               </Link>
-              <Link href={"https://discord.gg/En7TRBYE"}>
+              <Link
+                href={"https://discord.gg/En7TRBYE"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <DiscordBlueIcon className="size-10" />
               </Link>
               <Twitter className="size-10" />
@@ -65,13 +73,15 @@ const Footer = () => {
               <Link
                 href={"https://datlabs.gitbook.io/datlabs"}
                 className="text-muted-foreground text-md mt-3"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Documentation
               </Link>
-              {/* <Link href={} className="text-muted-foreground text-md mt-3">
+              {/* <Link href={} className="text-muted-foreground text-md mt-3" target="_blank" rel="noopener noreferrer">
                 Blogs
               </Link>
-              <Link href={} className="text-muted-foreground text-md mt-3">
+              <Link href={} className="text-muted-foreground text-md mt-3" target="_blank" rel="noopener noreferrer">
                 Newsletter
               </Link> */}
             </div>
@@ -83,23 +93,29 @@ const Footer = () => {
               >
                 Contact Us
               </Link>
-              {/* <Link href={} className="text-muted-foreground text-md mt-3">
+              {/* <Link href={} className="text-muted-foreground text-md mt-3" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </Link> */}
               <Link
                 href={"https://www.youtube.com/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
               >
                 YouTube
               </Link>
               <Link
                 href={"https://discord.gg/En7TRBYE"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
               >
                 Discord
               </Link>
               <Link
                 href={"https://github.com/dat-labs/dat-main"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
               >
                 GitHub

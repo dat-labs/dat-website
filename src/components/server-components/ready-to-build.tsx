@@ -15,14 +15,22 @@ export default function ReadyToBuild() {
           Retrieval based LLM apps on top of <br /> synced data ?
         </p>
         <div className="flex mb-10 mt-6 gap-4">
-          <Link href={"https://github.com/dat-labs/dat-main"}>
+          <Link
+            href={"https://github.com/dat-labs/dat-main"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline">
               <ArrowTopRightIcon className="mr-2 h-5 w-5" />
               Try Dat
             </Button>
           </Link>
 
-          <Link href={"https://github.com/dat-labs/dat-main"}>
+          <Link
+            href={"https://github.com/dat-labs/dat-main"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline">
               <Image
                 width={25}

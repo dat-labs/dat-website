@@ -27,10 +27,18 @@ const DatFlow = () => {
           </p>
         </div>
         <div className="flex gap-2 lg:mt-0 mt-5">
-          <Link href={"https://github.com/dat-labs/dat-main"}>
+          <Link
+            href={"https://github.com/dat-labs/dat-main"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline">Contribute to Project</Button>
           </Link>
-          <Link href={"https://github.com/dat-labs/dat-main"}>
+          <Link
+            href={"https://github.com/dat-labs/dat-main"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button>Try DAT</Button>
           </Link>
         </div>

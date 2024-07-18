@@ -95,15 +95,32 @@ const TopNavigationBar = () => {
                         <NavigationMenuContent>
                           <ul className="p-4 w-[30vw]">
                             {nav.links &&
-                              nav.links.map((link, linkIndex) => (
-                                <ListItem
-                                  key={`nav-link-${index}-${linkIndex}`}
-                                  title={link.title}
-                                  href={link.href}
-                                >
-                                  {link.description}
-                                </ListItem>
-                              ))}
+                              nav.links.map((link, linkIndex) =>
+                                nav.title != "Resources" ? (
+                                  <ListItem
+                                    key={`nav-link-${index}-${linkIndex}`}
+                                    title={link.title}
+                                    href={link.href}
+                                  >
+                                    {link.description}
+                                  </ListItem>
+                                ) : (
+                                  <ListItem
+                                    key={`nav-link-${index}-${linkIndex}`}
+                                    title={link.title}
+                                    href={link.href}
+                                    target={`${
+                                      nav.title === "Resources" && "_blank"
+                                    } `}
+                                    rel={`${
+                                      nav.title === "Resources" &&
+                                      "noopener noreferrer"
+                                    } `}
+                                  >
+                                    {link.description}
+                                  </ListItem>
+                                )
+                              )}
                           </ul>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
@@ -122,12 +139,20 @@ const TopNavigationBar = () => {
                 ))}
               </NavigationMenuList>
               <div className="flex gap-4 ml-8">
-                <Link href={"https://datlabs.gitbook.io/datlabs"}>
+                <Link
+                  href={"https://datlabs.gitbook.io/datlabs"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="rounded">
                     <ArrowTopRightIcon className="mr-2" /> Documentation
                   </Button>
                 </Link>
-                <Link href={"https://discord.gg/En7TRBYE"}>
+                <Link
+                  href={"https://discord.gg/En7TRBYE"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4 hover:bg-[#5865F2] hover:opacity-90">
                     <DiscordIcon className="size-6" />
                     <p>Join Discord</p>
