@@ -13,11 +13,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { LogoBlack } from "@/assets";
+import { DiscordIcon, LogoBlack } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-
 import {
   Drawer,
   DrawerClose,
@@ -37,17 +36,17 @@ const navConfig = [
     links: [
       {
         title: "Sources",
-        href: "/link1",
+        href: "/integrations",
         description: "Explore all of our sources",
       },
       {
         title: "Generators",
-        href: "/link2",
+        href: "/integrations",
         description: "Explore all of our generators",
       },
       {
         title: "Destinations",
-        href: "/link2",
+        href: "/integrations",
         description: "Explore all of our destinations",
       },
     ],
@@ -58,10 +57,14 @@ const navConfig = [
     links: [
       {
         title: "Github",
-        href: "/link1",
+        href: "https://github.com/dat-labs/dat-main",
         description: "View the github repository",
       },
-      { title: "Slack", href: "/link2", description: "Join our slack channel" },
+      {
+        title: "Discord",
+        href: "https://discord.gg/En7TRBYE",
+        description: "Join our Discord channel",
+      },
     ],
   },
   {
@@ -119,22 +122,17 @@ const TopNavigationBar = () => {
                 ))}
               </NavigationMenuList>
               <div className="flex gap-4 ml-8">
-                <Button className="rounded">
-                  <ArrowTopRightIcon className="mr-2" /> Documentation
-                </Button>
-                <Button
-                  variant="outline"
-                  className="rounded [background:#611F69] px-[10px)] text-white text-base font-medium p-4"
-                >
-                  <Image
-                    src="/assets/slack.png"
-                    alt="slack image"
-                    width={20}
-                    height={20}
-                    className="m-2"
-                  />
-                  Join Slack
-                </Button>
+                <Link href={"https://datlabs.gitbook.io/datlabs"}>
+                  <Button className="rounded">
+                    <ArrowTopRightIcon className="mr-2" /> Documentation
+                  </Button>
+                </Link>
+                <Link href={"https://discord.gg/En7TRBYE"}>
+                  <Button className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4 hover:bg-[#5865F2] hover:opacity-90">
+                    <DiscordIcon className="size-6" />
+                    <p>Join Discord</p>
+                  </Button>
+                </Link>
               </div>
             </NavigationMenu>
           </div>
@@ -190,7 +188,7 @@ const TopNavigationBar = () => {
                         height={20}
                         className="m-2"
                       />
-                      Join Slack
+                      Join Discord
                     </Button>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import IntegrationHeaderImage from "@/assets/images/integration-header.svg";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export default function SearchIntegrations() {
   return (
@@ -16,20 +17,23 @@ export default function SearchIntegrations() {
           generators & destination{" "}
         </p>
         <div className="flex gap-3 mt-5">
-          <Button variant="secondary">
-            <ArrowTopRightIcon className="mr-2 h-5 w-5" /> Request a connector
-          </Button>
-          <Button variant="secondary">
-            {" "}
-            <Image
-              width={25}
-              height={25}
-              src="https://cdn.icon-icons.com/icons2/2428/PNG/512/github_black_logo_icon_147128.png"
-              alt="github logo"
-              className="mr-3"
-            />
-            Connectors
-          </Button>
+          <Link href={"/"}>
+            <Button variant="secondary">
+              <ArrowTopRightIcon className="mr-2 h-5 w-5" /> Request a connector
+            </Button>
+          </Link>
+          <Link href={"/"}>
+            <Button variant="secondary">
+              <Image
+                width={25}
+                height={25}
+                src="https://cdn.icon-icons.com/icons2/2428/PNG/512/github_black_logo_icon_147128.png"
+                alt="github logo"
+                className="mr-3"
+              />
+              Connectors
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center items-center">

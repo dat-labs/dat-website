@@ -7,6 +7,7 @@ import DatGif from "@/assets/images/dat.gif";
 import Image from "next/image";
 import ScheduleAndMonitor from "@/assets/images/schedule-monitor.svg";
 import LogsAndSchedule from "@/assets/images/logs-schedule.svg";
+import Link from "next/link";
 
 const DatFlow = () => {
   const [isClient, setIsClient] = React.useState(false);
@@ -26,8 +27,12 @@ const DatFlow = () => {
           </p>
         </div>
         <div className="flex gap-2 lg:mt-0 mt-5">
-          <Button variant="outline">Contribute to Project</Button>
-          <Button>Try DAT</Button>
+          <Link href={"https://github.com/dat-labs/dat-main"}>
+            <Button variant="outline">Contribute to Project</Button>
+          </Link>
+          <Link href={"https://github.com/dat-labs/dat-main"}>
+            <Button>Try DAT</Button>
+          </Link>
         </div>
       </div>
       <div
