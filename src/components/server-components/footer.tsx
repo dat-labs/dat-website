@@ -11,7 +11,11 @@ const Footer = () => {
       <div className="relative">
         <div className="absolute w-screen -top-5">
           <div className="flex w-12/12 justify-center">
-            <FooterDatLogoAsset className="h-10 pl-2 pr-2" />
+            <FooterDatLogoAsset
+              className="h-10 pl-2 pr-2"
+              role="img"
+              aria-label="fotter dat logo asset"
+            />
           </div>
         </div>
       </div>
@@ -19,7 +23,11 @@ const Footer = () => {
         <div className="flex flex-row justify-between">
           <div className="lg:w-4/12 w-12/12 mb-12 lg:mb-0">
             <Link href={"/"}>
-              <LogoBlack className="h-10 w-24" />
+              <LogoBlack
+                className="h-10 w-24"
+                role="img"
+                aria-label="dat logo"
+              />
             </Link>
 
             <p className="text-md mt-6 text-muted-foreground w-10/12">
@@ -28,13 +36,29 @@ const Footer = () => {
             </p>
             <div className="flex mt-6 gap-4">
               <Link href={"https://github.com/dat-labs/dat-main"}>
-                <GitHubLogoIcon className="size-10" />
+                <GitHubLogoIcon
+                  className="size-10"
+                  role="img"
+                  aria-label="Go to the dat github"
+                />
               </Link>
               <Link href={"https://discord.gg/En7TRBYE"}>
-                <DiscordBlueIcon className="size-10" />
+                <DiscordBlueIcon
+                  className="size-10"
+                  role="img"
+                  aria-label="Go to the dat discord server"
+                />
               </Link>
-              <Twitter className="size-10" />
-              <LinkedIn className="size-10" />
+              <Twitter
+                className="size-10"
+                role="img"
+                aria-label="Join dat at twitter"
+              />
+              <LinkedIn
+                className="size-10"
+                role="img"
+                aria-label="Join dat on youtube"
+              />
             </div>
           </div>
 
@@ -44,18 +68,21 @@ const Footer = () => {
               <Link
                 href={"/integrations"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the sources"
               >
                 Sources
               </Link>
               <Link
                 href={"/integrations"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the Generators"
               >
                 Generators
               </Link>
               <Link
                 href={"/integrations"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the Destination"
               >
                 Destination
               </Link>
@@ -65,6 +92,7 @@ const Footer = () => {
               <Link
                 href={"https://datlabs.gitbook.io/datlabs"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View dat documentation"
               >
                 Documentation
               </Link>
@@ -80,6 +108,7 @@ const Footer = () => {
               <Link
                 href={"/about-us"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to the contact us page"
               >
                 Contact Us
               </Link>
@@ -89,18 +118,21 @@ const Footer = () => {
               <Link
                 href={"https://www.youtube.com/"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to dat youtube"
               >
                 YouTube
               </Link>
               <Link
                 href={"https://discord.gg/En7TRBYE"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to the dat discord"
               >
                 Discord
               </Link>
               <Link
                 href={"https://github.com/dat-labs/dat-main"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to dat github repo"
               >
                 GitHub
               </Link>

@@ -28,10 +28,17 @@ const DatFlow = () => {
         </div>
         <div className="flex gap-2 lg:mt-0 mt-5">
           <Link href={"https://github.com/dat-labs/dat-main"}>
-            <Button variant="outline">Contribute to Project</Button>
+            <Button
+              variant="outline"
+              aria-label="Go to the contribution github repo of dat."
+            >
+              Contribute to Project
+            </Button>
           </Link>
           <Link href={"https://github.com/dat-labs/dat-main"}>
-            <Button>Try DAT</Button>
+            <Button aria-label="Go to the installation github repo of dat.">
+              Try DAT
+            </Button>
           </Link>
         </div>
       </div>
@@ -53,13 +60,22 @@ const DatFlow = () => {
             </p>
           </div>
           <div className="lg:w-6/12 w-full">
-            <ConnectImage className="h-full w-full" />
+            <ConnectImage
+              className="h-full w-full"
+              role="img"
+              aria-label="Step 1 of dat flow. Connect your source"
+            />
           </div>
         </div>
         <div className="flex items-center flex-wrap border-rose-200 border-r-4 border-b-4 pt-12 pb-12 rounded-br-3xl">
           <div className="lg:w-6/12 w-full">
             {isClient && (
-              <video autoPlay loop muted>
+              <video
+                autoPlay
+                loop
+                muted
+                aria-label="Video showing embedding generation"
+              >
                 <source src="/assets/dat.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
@@ -84,12 +100,22 @@ const DatFlow = () => {
             </p>
           </div>
           <div className="lg:w-6/12 w-full">
-            <Image className="h-full w-full" src={DatGif} alt="dat-gif" />
+            <Image
+              className="h-full w-full"
+              src={DatGif}
+              alt="dat-gif"
+              role="img"
+              aria-label="Step 3 of dat flow. Storing your generated embeddings"
+            />
           </div>
         </div>
         <div className="flex items-center flex-wrap border-rose-200 border-r-4 pt-12 pb-12 ">
           <div className="lg:w-6/12 w-full">
-            <ScheduleAndMonitor className="h-full w-full" />
+            <ScheduleAndMonitor
+              className="h-full w-full"
+              role="img"
+              aria-label="Step 4 of dat flow. Schedule and monitor you connections for periodic generation and storing."
+            />
           </div>
           <div className="lg:w-6/12 w-full lg:p-10 mt-12 lg:mt-0">
             <p className="text-2xl text-muted-foreground">STEP 4</p>
@@ -105,7 +131,11 @@ const DatFlow = () => {
         <p className="text-center text-2xl font-semibold">
           Logs, Advanced Scheduling & Last Run Status all in one
         </p>
-        <LogsAndSchedule className="w-full h-full mt-16" />
+        <LogsAndSchedule
+          className="w-full h-full mt-16"
+          role="img"
+          aria-label="Image showing the logs and scheduling ui of dat."
+        />
       </div>
     </div>
   );

@@ -10,7 +10,11 @@ const DiversitySource = () => {
           Diversity of <br /> sources
         </p>
         <Link href={"/integrations"}>
-          <Button variant="outline" className="mt-6">
+          <Button
+            variant="outline"
+            className="mt-6"
+            aria-label="See all the connectors available in dat."
+          >
             View All Connectors
           </Button>
         </Link>

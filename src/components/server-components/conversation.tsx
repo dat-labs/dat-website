@@ -14,11 +14,15 @@ const Conversation = () => {
           </p>
           <div className="flex mt-6 gap-3">
             <Link href={"https://discord.gg/En7TRBYE"}>
-              <Button>Join Discord</Button>
+              <Button aria-label="Join the discord channel for dat.">
+                Join Discord
+              </Button>
             </Link>
 
             <Link href={"https://github.com/dat-labs/dat-main"}>
-              <Button variant="outline">Join Github</Button>
+              <Button variant="outline" aria-label="Join the github for dat.">
+                Join Github
+              </Button>
             </Link>
           </div>
         </div>

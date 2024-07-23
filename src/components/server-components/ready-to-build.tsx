@@ -16,14 +16,20 @@ export default function ReadyToBuild() {
         </p>
         <div className="flex mb-10 mt-6 gap-4">
           <Link href={"https://github.com/dat-labs/dat-main"}>
-            <Button variant="outline">
+            <Button
+              variant="outline"
+              aria-label="Try Dat. Go to the dat installation github repo."
+            >
               <ArrowTopRightIcon className="mr-2 h-5 w-5" />
               Try Dat
             </Button>
           </Link>
 
           <Link href={"https://github.com/dat-labs/dat-main"}>
-            <Button variant="outline">
+            <Button
+              variant="outline"
+              aria-label="Try Dat. Go to the dat contribution github repo."
+            >
               <Image
                 width={25}
                 height={25}

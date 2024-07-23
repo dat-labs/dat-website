@@ -18,12 +18,15 @@ export default function SearchIntegrations() {
         </p>
         <div className="flex gap-3 mt-5">
           <Link href={"/"}>
-            <Button variant="secondary">
+            <Button variant="secondary" aria-label="Request a connector to dat">
               <ArrowTopRightIcon className="mr-2 h-5 w-5" /> Request a connector
             </Button>
           </Link>
           <Link href={"/"}>
-            <Button variant="secondary">
+            <Button
+              variant="secondary"
+              aria-label="Go to github repo for connectors"
+            >
               <Image
                 width={25}
                 height={25}
@@ -37,7 +40,11 @@ export default function SearchIntegrations() {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <IntegrationHeaderImage className="h-40" />
+        <IntegrationHeaderImage
+          className="h-40"
+          role="img"
+          aria-label="Connector asset image"
+        />
       </div>
     </div>
   );

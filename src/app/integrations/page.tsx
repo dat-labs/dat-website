@@ -2,6 +2,18 @@ import ReadyToBuild from "@/components/server-components/integrations/ready-to-b
 import SearchForIntegrations from "@/components/server-components/integrations/search-for-integrations";
 import SearchIntegrations from "@/components/server-components/integrations/search-integrations";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DAT - Integrations",
+  description: "Explore all the integrations dat supports out of the box.",
+  openGraph: {
+    title: "DAT - Integrations",
+    description: "Explore all the integrations dat supports out of the box.",
+    type: "website",
+    siteName: "Dat Website",
+  },
+};
 
 export default function Integrations() {
   return (

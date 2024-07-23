@@ -32,7 +32,11 @@ const GettingStarted = () => {
         </div>
       </div>
       <div className="mt-12">
-        <ConnectionImage className="h-full w-full" />
+        <ConnectionImage
+          className="h-full w-full"
+          role="img"
+          aria-label="Image of dat ui showing the connections list."
+        />
       </div>
     </div>
   );

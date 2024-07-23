@@ -32,7 +32,11 @@ const UnStructuredLlms = () => {
           </div>
         </div>
         <div className="lg:w-9/12 w-12/12 lg:pl-8 mt-6 lg:mt-0">
-          <Image src={flow} className="rounded-xl" alt="flow-gif" />
+          <Image
+            src={flow}
+            className="rounded-xl"
+            alt="Gif showing a high level flow for dat."
+          />
         </div>
       </div>
     </div>

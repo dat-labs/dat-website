@@ -15,6 +15,7 @@ export default function SearchForIntegrations() {
         onChange={(e) => setSearchValue(e.target.value)}
         value={searchValue}
         placeholder="Search for any Source, Generator or Destination"
+        aria-label="Search for any Source, Generator or Destination"
       />
       <SearchSources search={searchValue} />
       <SearchGenerators search={searchValue} />
