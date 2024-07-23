@@ -1,6 +1,7 @@
 import Conversation from "@/components/server-components/conversation";
 import DatFlow from "@/components/server-components/dat-flow";
 import DiversitySource from "@/components/server-components/diversity-sources";
+import DontTakeOurWord from "@/components/server-components/dontTakeOurWord";
 import GettingStarted from "@/components/server-components/getting-started";
 import Intro from "@/components/server-components/intro";
 import ReadyToBuild from "@/components/server-components/ready-to-build";
@@ -15,6 +16,7 @@ export default function Home() {
       <DatFlow />
       <Conversation />
       <DiversitySource />
+      {/* <DontTakeOurWord /> */}
       <ReadyToBuild />
     </div>
   );

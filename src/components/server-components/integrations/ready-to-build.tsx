@@ -6,29 +6,41 @@ import React from "react";
 
 export default function ReadyToBuild() {
   return (
-    <div className="bg-foreground p-7 lg:p-10 rounded-2xl mt-12">
-      <p className=" text-2xl lg:text-3xl text-muted-foreground font-semibold">
-        Ready to build your{" "}
+    <div className="lg:h-[330px] h-[520px] lg:bg-center bg-bottom lg:bg-[url('/assets/ready-to-build.svg')] bg-[url('/assets/ready-to-build-mobile.svg')] bg-cover p-6 lg:p-10 rounded-2xl mt-12">
+      <p className="text-3xl leading-[3rem] lg:text-4xl text-muted-foreground font-semibold lg:mt-10">
+        Ready to build your
       </p>
-      <p className="text-background  text-3xl lg:text-4xl font-semibold mt-3 w-full lg:w-6/12">
+      <p className="text-background text-3xl leading-[3rem] lg:text-4xl font-semibold w-full lg:w-6/12">
         own Data Movement Tool ?
       </p>
-      <div className="flex gap-3 mt-5">
+      <div className="flex w-full mx-auto lg:justify-start gap-3 justify-between lg:mt-8 mt-4">
         <Link
           href={"https://github.com/dat-labs/dat-main"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button variant="secondary">
-            <ArrowTopRightIcon className="mr-2 h-5 w-5" /> Try Dat
+          <Button
+            variant="outline"
+            className="text-[#020617] text-md"
+            size={"lg"}
+          >
+            <span className="p-0.5 bg-black rounded-full mr-2">
+              <ArrowTopRightIcon className="h-5 w-5" color="white" />
+            </span>
+            Try dat
           </Button>
         </Link>
+
         <Link
           href={"https://github.com/dat-labs/dat-main"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button variant="secondary">
+          <Button
+            variant="outline"
+            className="text-[#020617] text-md"
+            size={"lg"}
+          >
             <Image
               width={25}
               height={25}

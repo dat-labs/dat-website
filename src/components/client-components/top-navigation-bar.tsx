@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { DiscordIcon, LogoBlack } from "@/assets";
+import { DiscordButton, DiscordIcon, LogoBlack } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -36,17 +36,17 @@ const navConfig = [
     links: [
       {
         title: "Sources",
-        href: "/integrations",
+        href: "/integrations/#Sources",
         description: "Explore all of our sources",
       },
       {
         title: "Generators",
-        href: "/integrations",
+        href: "/integrations/#Generators",
         description: "Explore all of our generators",
       },
       {
         title: "Destinations",
-        href: "/integrations",
+        href: "/integrations/#Destinations",
         description: "Explore all of our destinations",
       },
     ],
@@ -74,6 +74,12 @@ const navConfig = [
 ];
 
 const TopNavigationBar = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+
+  const handleLinkClick = () => {
+    setIsDrawerOpen(false);
+  };
+
   return (
     <div className="flex justify-center">
       <div className="w-11/12 lg:w-8/12">
@@ -89,7 +95,7 @@ const TopNavigationBar = () => {
                   <React.Fragment key={index}>
                     {nav.links ? (
                       <NavigationMenuItem key={`nav-item-${index}`}>
-                        <NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="font-medium">
                           {nav.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -153,18 +159,19 @@ const TopNavigationBar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="rounded bg-[#5865F2] gap-2 text-white text-base font-medium p-4 hover:bg-[#5865F2] hover:opacity-90">
-                    <DiscordIcon className="size-6" />
-                    <p>Join Discord</p>
-                  </Button>
+                  <DiscordButton className="w-[150px] hover:opacity-90" />
                 </Link>
               </div>
             </NavigationMenu>
           </div>
           <div className="inline lg:hidden">
-            <Drawer>
+            <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
               <DrawerTrigger asChild>
-                <Button size="icon" variant="ghost">
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                >
                   <HamburgerMenuIcon className="h-6 w-6" />
                 </Button>
               </DrawerTrigger>
@@ -174,17 +181,24 @@ const TopNavigationBar = () => {
                     <div className="flex flex-wrap">
                       {navConfig.map((navItem) => (
                         <div key={navItem.title} className="w-full mt-4">
-                          <p className="text-xl font-semibold">
+                          <Link
+                            href={navItem.href}
+                            className="text-xl font-semibold mb-2"
+                            onClick={handleLinkClick}
+                          >
                             {navItem.title}
-                          </p>
-                          <div className="ml-4">
+                          </Link>
+                          <div className="flex flex-col gap-2 ml-4">
                             {navItem.links?.map((link) => (
-                              <p
-                                key={link.title}
-                                className="text-muted-foreground mt-3"
-                              >
-                                {link.title}
-                              </p>
+                              <div key={link.title}>
+                                <Link
+                                  href={link.href}
+                                  className="text-muted-foreground mt-3"
+                                  onClick={handleLinkClick}
+                                >
+                                  {link.title}
+                                </Link>
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -192,29 +206,29 @@ const TopNavigationBar = () => {
                     </div>
                   </div>
                   <div
-                    className="h-[1px] mt-12 mb-12 rounded-sm"
+                    className="h-[1px] my-8 rounded-sm"
                     style={{
                       backgroundImage:
                         "linear-gradient(90deg, #EEEEEE 0%, #888888 50%, #EEEEEE 100%)",
                     }}
                   ></div>
                   <div className="flex gap-4 ml-8">
-                    <Button className="rounded">
-                      <ArrowTopRightIcon className="mr-2" /> Documentation
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="rounded [background:#611F69] px-[10px)] text-white p-4"
+                    <Link
+                      href={"https://datlabs.gitbook.io/datlabs"}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Image
-                        src="/assets/slack.png"
-                        alt="slack image"
-                        width={20}
-                        height={20}
-                        className="m-2"
-                      />
-                      Join Discord
-                    </Button>
+                      <Button className="rounded">
+                        <ArrowTopRightIcon className="mr-2" /> Documentation
+                      </Button>
+                    </Link>
+                    <Link
+                      href={"https://discord.gg/En7TRBYE"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <DiscordButton className="w-[150px] hover:opacity-90" />
+                    </Link>
                   </div>
                 </div>
               </DrawerContent>

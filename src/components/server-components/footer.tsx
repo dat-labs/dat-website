@@ -9,20 +9,20 @@ const Footer = () => {
   return (
     <div>
       <div className="relative">
-        <div className="absolute w-screen -top-5">
-          <div className="flex w-12/12 justify-center">
-            <FooterDatLogoAsset className="h-10 pl-2 pr-2" />
+        <div className="absolute left-1/3 -top-5 ">
+          <div className="lg:translate-x-36 -translate-x-10">
+            <FooterDatLogoAsset className="h-10" />
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:w-10/12 mx-auto w-11/12 py-6 lg:p-0 !pt-12 mb-10">
-        <div className="flex flex-row justify-between">
-          <div className="lg:w-4/12 w-12/12 mb-12 lg:mb-0">
+      <div className="flex flex-col lg:w-10/12 lg:mx-auto ml-10 w-11/12 py-6 lg:p-0 !pt-12 mb-10 ">
+        <div className="flex lg:flex-row flex-col justify-between">
+          <div className="lg:w-4/12 w-full mb-12 lg:mb-0 flex flex-col lg:mx-0 mx-2 lg:mb-0 mt-5">
             <Link href={"/"}>
-              <LogoBlack className="h-10 w-24" />
+              <LogoBlack className="h-14 w-28 " />
             </Link>
 
-            <p className="text-md mt-6 text-muted-foreground w-10/12">
+            <p className="mt-6 text-muted-foreground lg:text-md text-sm w-11/12 lg:w-9/12">
               Seamlessly moving your data and making it accessible to any vector
               database and popular LLM (Large Language Model) frameworks.
             </p>
@@ -46,29 +46,29 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:w-5/12 flex lg:flex-row flex-col pl-16 space-x-8">
-            <div className="lg:w-5/12 flex flex-col">
+          <div className="lg:w-5/12 w-full flex lg:flex-row flex-col lg:pl-16 lg:mx-0 mx-2 gap-8 ">
+            <div className="lg:w-5/12 w-full flex flex-col">
               <p className="text-md font-semibold">EXPLORE CONNECTORS</p>
               <Link
-                href={"/integrations"}
+                href={"/integrations/#Sources"}
                 className="text-muted-foreground text-md mt-3"
               >
                 Sources
               </Link>
               <Link
-                href={"/integrations"}
+                href={"/integrations/#Generators"}
                 className="text-muted-foreground text-md mt-3"
               >
                 Generators
               </Link>
               <Link
-                href={"/integrations"}
+                href={"/integrations/#Destination"}
                 className="text-muted-foreground text-md mt-3"
               >
                 Destination
               </Link>
             </div>
-            <div className="lg:w-3/12 flex flex-col">
+            <div className="lg:w-3/12 w-full flex flex-col">
               <p className="text-md font-semibold">RESOURCES</p>
               <Link
                 href={"https://datlabs.gitbook.io/datlabs"}
@@ -85,7 +85,7 @@ const Footer = () => {
                 Newsletter
               </Link> */}
             </div>
-            <div className="lg:w-3/12 flex flex-col">
+            <div className="lg:w-3/12 w-full flex flex-col">
               <p className="text-md font-semibold">ABOUT US</p>
               <Link
                 href={"/about-us"}
@@ -124,12 +124,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-row justify-between w-full mt-32 text-xs text-zinc-400">
+        <div className="flex lg:flex-row flex-col gap-3 lg:justify-between lg:w-full w-fit lg:mx-0 ml-16 lg:mt-24 mt-10 text-sm text-zinc-400">
           <p>© 2024 DAT. All rights reserved.</p>
-          <span className="flex flex-row space-x-2 mr-10">
-            <p>Term & Condition</p>
-            <p>Privacy Policy</p>
-          </span>
+          <div className="flex lg:flex-row flex-col gap-2 lg:mr-8 lg:text-left text-center">
+            <Link href={"/"}>
+              <p>Terms & Condition</p>
+            </Link>
+            <Link href={"/"}>
+              <p>Privacy Policy</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

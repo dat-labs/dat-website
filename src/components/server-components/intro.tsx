@@ -37,27 +37,28 @@ const Intro = () => {
         </svg>
       ))}
 
-      <div className="p-10">
-        <p className="text-4xl text-muted-foreground font-semibold mb-7">
-          What is <span className="text-foreground">dat</span>?
+      <div className="lg:p-10 p-2">
+        <p className="text-4xl text-[#1F1F1F4D] font-semibold my-7">
+          What is <span className="font-[Comfortaa] text-black">dat</span>?
         </p>
-        <p className="text-md font-normal leading-6 text-muted-foreground">
+        <p className="lg:text-lg text-sm leading-6 text-gray-500">
           Moving generative AI applications to production often requires using
           Vector stores to provide them with relevant context. Keeping these
           vector stores up-to-date with changes in your data is critical for the
-          continued performance of these applications. dat makes this possible
-          by setting up pipelines to update your vector stores as your source
-          data changes.
+          continued performance of these applications.{" "}
+          <span className="font-[Comfortaa]">dat </span>makes this possible by
+          setting up pipelines to update your vector stores as your source data
+          changes.
         </p>
         <div className="flex mt-12 mb-6 w-12/12 flex-wrap">
-          <div className="lg:w-3/12 w-12/12 p-3">
-            <Card>
+          <div className="lg:w-3/12 w-10/12 lg:mx-0 mx-auto p-2">
+            <Card className="border-[#E5EBFF] rounded">
               <CardHeader className="p-4">
                 <CardTitle>
-                  <div className="flex gap-2 items-center">
+                  <div className="pl-2 flex gap-2 items-center">
                     <div>
-                      <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                        <WhatDat1 className="h-6 w-6" />
+                      <div className="size-9 rounded-full bg-blue-200 flex justify-center items-center">
+                        <WhatDat1 className="h-6 w-6 m-auto" />
                       </div>
                     </div>
                     <div>
@@ -66,7 +67,7 @@ const Intro = () => {
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pl-6 pr-6">
+              <CardContent className="lg:px-3 px-6">
                 <p className="text-xs">
                   Breaking down silos and enabling seamless integration with any
                   vector database and LLM frameworks.
@@ -74,23 +75,23 @@ const Intro = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="lg:w-3/12 w-12/12 lg:mt-16 p-3">
-            <Card>
+          <div className="lg:w-3/12 w-10/12 lg:mx-0 mx-auto lg:mt-16 p-2">
+            <Card className="border-[#E5EBFF] rounded">
               <CardHeader className="p-4">
                 <CardTitle>
-                  <div className="flex gap-2 items-center">
+                  <div className="pl-2 flex gap-2 items-center">
                     <div>
-                      <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                        <LoadPopularVectors className="h-6 w-6" />
+                      <div className="size-9 rounded-full bg-blue-200 flex justify-center items-center">
+                        <LoadPopularVectors className="h-6 w-6 m-auto" />
                       </div>
                     </div>
                     <div>
-                      <p>Load to Popular Vector Stores</p>
+                      <p className="leading-5">Load to Popular Vector Stores</p>
                     </div>
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pl-6 pr-6">
+              <CardContent className="lg:px-3 px-6">
                 <p className="text-xs">
                   Build your own connector and collaborate with growing DAT’s
                   community for assistance and queries.
@@ -98,23 +99,23 @@ const Intro = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="lg:w-3/12 w-12/12 p-3">
-            <Card>
+          <div className="lg:w-3/12 w-10/12 lg:mx-0 mx-auto p-2">
+            <Card className="border-[#E5EBFF] rounded">
               <CardHeader className="p-4">
                 <CardTitle>
-                  <div className="flex gap-2 items-center">
+                  <div className="pl-2 flex gap-2 items-center">
                     <div>
-                      <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                        <RAG className="h-4 w-4" />
+                      <div className="size-9 rounded-full bg-blue-200 flex justify-center items-center">
+                        <RAG className="h-4 w-4 m-auto" />
                       </div>
                     </div>
                     <div>
-                      <p>RAG specific transformations</p>
+                      <p className="leading-5">RAG specific transformations</p>
                     </div>
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pl-6 pr-6">
+              <CardContent className="lg:px-3 px-6">
                 <p className="text-xs">
                   Protect your data with robust security features, including
                   encryption, access controls, and audit trails, ensuring
@@ -123,14 +124,14 @@ const Intro = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="lg:w-3/12 w-12/12 lg:mt-16 p-3">
-            <Card>
+          <div className="lg:w-3/12 w-10/12 lg:mx-0 mx-auto lg:mt-16 p-2">
+            <Card className="border-[#E5EBFF] rounded">
               <CardHeader className="p-4">
                 <CardTitle>
-                  <div className="flex gap-2 items-center">
+                  <div className="pl-2 flex gap-2 items-center">
                     <div>
-                      <div className="h-8 w-8 rounded-full bg-blue-200 flex justify-center items-center">
-                        <Security className="h-6 w-6" />
+                      <div className="size-9 rounded-full bg-blue-200 flex justify-center items-center">
+                        <Security className="h-6 w-6 m-auto" />
                       </div>
                     </div>
                     <div>
@@ -139,7 +140,7 @@ const Intro = () => {
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pl-6 pr-6">
+              <CardContent className="lg:px-3 px-6">
                 <p className="text-xs">
                   Protect your data with robust security features, including
                   encryption, access controls, and audit trails, ensuring

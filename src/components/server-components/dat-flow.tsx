@@ -7,65 +7,104 @@ import DatGif from "@/assets/images/dat.gif";
 import Image from "next/image";
 import ScheduleAndMonitor from "@/assets/images/schedule-monitor.svg";
 import LogsAndSchedule from "@/assets/images/logs-schedule.svg";
+import LogsAndScheduleMobile from "@/assets/images/logs-schedule-mobile.svg";
+
 import Link from "next/link";
+import { ArrowTopRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const DatFlow = () => {
   const [isClient, setIsClient] = React.useState(false);
   React.useEffect(() => {
     setIsClient(true);
   }, []);
+
   return (
-    <div className="mt-24">
+    <div className="mt-16 lg:mt-24">
       <div className="flex flex-wrap justify-between">
-        <div>
+        <div className="text-center lg:text-left">
           <p className="text-3xl font-semibold">
             Open source and completely free to use
           </p>
-          <p className="text-md text-muted-foreground">
+          <p className="lg:text-xl text-base text-muted-foreground mt-4 w-10/12 lg:w-full mx-auto lg:mx-0">
             Address all your needs while retaining complete control over your
-            data{" "}
+            data
           </p>
         </div>
-        <div className="flex gap-2 lg:mt-0 mt-5">
+        <div className="flex flex-col lg:flex-row gap-2 lg:mt-0 mt-5 lg:mx-0 mx-auto lg:space-y-0 space-y-2">
           <Link
+            className="lg:mx-0 mx-auto"
             href={"https://github.com/dat-labs/dat-main"}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline">Contribute to Project</Button>
+            <Button variant="outline">
+              <GitHubLogoIcon className="mr-2 size-6" />
+              <p className="font-semibold">Contribute to Project</p>
+            </Button>
           </Link>
           <Link
+            className="lg:mx-0 mx-auto"
             href={"https://github.com/dat-labs/dat-main"}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button>Try DAT</Button>
+            <Button>
+              <span className="bg-white rounded-full p-0.5 mr-2 my-auto">
+                <ArrowTopRightIcon color="black" />
+              </span>
+              Try DAT
+            </Button>
           </Link>
         </div>
       </div>
+
       <div
-        className="h-[1px] mt-12 rounded-sm"
+        className="h-[0.5px] mt-12 rounded-sm hidden lg:block"
         style={{
           backgroundImage:
             "linear-gradient(90deg, #EEEEEE 0%, #888888 50%, #EEEEEE 100%)",
         }}
       ></div>
       <div>
-        <div className="flex items-center mt-12 flex-wrap border-l-4 border-rose-200 border-b-4 pb-12 rounded-bl-3xl">
-          <div className="lg:w-6/12 w-full lg:p-10">
-            <p className="text-2xl text-muted-foreground">STEP 1</p>
-            <p className="text-3xl font-semibold">Connect</p>
-            <p className="text-md text-muted-foreground">
+        <div className="flex items-center flex-wrap border-[#FFCFD9] border-l-4 border-b-4 rounded-bl-3xl lg:border-none pb-12 lg:pb-0">
+          <div className="lg:w-6/12 lg:h-[450px] w-full flex flex-col justify-center lg:my-auto lg:px-12 lg:py-0 px-0 pt-12 pb-4 pl-4 lg:border-[#FFCFD9] lg:border-l-4 lg:border-b-4 lg:rounded-bl-3xl">
+            <p className="text-2xl lg:text-muted-foreground text-zinc-400 opacity-60 font-semibold mb-2">
+              STEP 1
+            </p>
+            <p className="text-3xl font-semibold mb-2">Connect</p>
+            <p className="text-md text-muted-foreground mb-2">
               Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
           </div>
-          <div className="lg:w-6/12 w-full">
-            <ConnectImage className="h-full w-full" />
+
+          <div className="lg:w-6/12 lg:h-[450px] w-full lg:rotate-0 rotate-6">
+            <ConnectImage className="size-11/12 m-auto" />
           </div>
         </div>
-        <div className="flex items-center flex-wrap border-rose-200 border-r-4 border-b-4 pt-12 pb-12 rounded-br-3xl">
-          <div className="lg:w-6/12 w-full">
+
+        <div className="flex items-center flex-wrap border-[#FFCFD9] border-r-4 border-b-4 rounded-br-3xl lg:border-none pb-12 lg:pb-0">
+          <div className="lg:w-6/12 lg:h-[450px] w-full lg:block hidden ">
+            {isClient && (
+              <video autoPlay loop muted className="size-11/12 lg:m-auto pt-5">
+                <source src="/assets/dat.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
+
+          <div className="lg:w-6/12 lg:h-[450px] w-full flex flex-col justify-center lg:my-auto lg:px-12 px-0 lg:py-0 pt-6 pl-4 lg:border-[#BDDFFF] lg:border-r-4 lg:border-b-4 lg:rounded-br-3xl">
+            <p className="text-2xl lg:text-muted-foreground text-zinc-400 opacity-60 font-semibold mb-2">
+              STEP 2
+            </p>
+            <p className="text-3xl font-semibold mb-2">Embed</p>
+            <p className="text-md text-muted-foreground mb-2">
+              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </div>
+
+          <div className="lg:w-6/12 h-full w-full px-4 lg:hidden">
             {isClient && (
               <video autoPlay loop muted>
                 <source src="/assets/dat.webm" type="video/webm" />
@@ -73,47 +112,51 @@ const DatFlow = () => {
               </video>
             )}
           </div>
-          <div className="lg:w-6/12 w-full lg:p-10 flex-wrap mt-12 lg:mt-0">
-            <p className="text-2xl text-muted-foreground">STEP 2</p>
-            <p className="text-3xl font-semibold">Embed</p>
-            <p className="text-md text-muted-foreground">
+        </div>
+
+        <div className="flex items-center flex-wrap border-[#BDDFFF] border-l-4 border-b-4 rounded-bl-3xl lg:border-none pb-12 lg:pb-0">
+          <div className="lg:w-6/12 lg:h-[450px] w-full flex flex-col justify-center lg:my-auto lg:px-12 lg:py-0 px-0 pt-12 pb-4 pl-4 lg:border-[#FFCFD9] lg:border-l-4 lg:border-b-4 lg:rounded-bl-3xl">
+            <p className="text-2xl lg:text-muted-foreground text-zinc-400 opacity-60 font-semibold mb-2">
+              STEP 3
+            </p>
+            <p className="text-3xl font-semibold mb-2">Store</p>
+            <p className="text-md text-muted-foreground mb-2">
               Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
           </div>
+          <div className="flex flex-col justify-between lg:w-6/12 lg:h-[450px] m-auto">
+            <Image
+              className="size-10/12 lg:size-8/12 m-auto rounded-xl"
+              src={DatGif}
+              alt="dat-gif"
+            />
+          </div>
         </div>
-        <div className="flex items-center flex-wrap border-rose-200 border-b-4 border-l-4 pt-12 pb-12 rounded-bl-3xl">
-          <div className="lg:w-6/12 w-full lg:p-10">
-            <p className="text-2xl text-muted-foreground">STEP 3</p>
-            <p className="text-3xl font-semibold">Store</p>
-            <p className="text-md text-muted-foreground">
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
+
+        <div className="flex items-center flex-wrap border-[#BDDFFF] border-r-4  lg:border-none pb-12 lg:pb-0">
+          <div className="lg:w-6/12 w-full lg:h-[450px] flex flex-col justify-between lg:mt-0 mt-6">
+            <ScheduleAndMonitor className="size-11/12 m-auto lg:rotate-0 -rotate-6" />
+          </div>
+
+          <div className="lg:w-6/12 lg:h-[450px] w-full flex flex-col justify-center lg:my-auto lg:px-12 px-0 lg:py-0 pt-6 pl-4 lg:border-[#BDDFFF] lg:border-r-4 lg:border-b-4 lg:rounded-br-3xl">
+            <p className="text-2xl lg:text-muted-foreground text-zinc-400 opacity-60 font-semibold mb-2">
+              STEP 4
             </p>
-          </div>
-          <div className="lg:w-6/12 w-full">
-            <Image className="h-full w-full" src={DatGif} alt="dat-gif" />
-          </div>
-        </div>
-        <div className="flex items-center flex-wrap border-rose-200 border-r-4 pt-12 pb-12 ">
-          <div className="lg:w-6/12 w-full">
-            <ScheduleAndMonitor className="h-full w-full" />
-          </div>
-          <div className="lg:w-6/12 w-full lg:p-10 mt-12 lg:mt-0">
-            <p className="text-2xl text-muted-foreground">STEP 4</p>
-            <p className="text-3xl font-semibold">Schedule & Monitor</p>
-            <p className="text-md text-muted-foreground">
+            <p className="text-3xl font-semibold mb-4">Schedule and Monitor</p>
+            <p className="text-md text-muted-foreground mb-2">
               Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
           </div>
         </div>
       </div>
-      <div className="mt-24">
-        <p className="text-center text-2xl font-semibold">
+      <div className="lg:mt-24 mt-4">
+        <p className="text-center text-3xl font-semibold">
           Logs, Advanced Scheduling & Last Run Status all in one
         </p>
-        <LogsAndSchedule className="w-full h-full mt-16" />
+        <LogsAndSchedule className="lg:inline hidden w-full h-full mt-16" />
+        <LogsAndScheduleMobile className="lg:hidden w-full h-full mt-4" />
       </div>
     </div>
   );

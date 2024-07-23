@@ -1,37 +1,72 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import flow from "@/assets/images/flow.gif";
+import Infographics from "@/assets/images/Infographics.gif";
+
 import Image from "next/image";
 
 const UnStructuredLlms = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-12">
       <div className="flex items-center flex-wrap">
-        <div className="lg:w-3/12 w-12/12 lg:pr-8">
-          <div className="">
+        <div className="lg:w-4/12 w-full lg:pr-8">
+          <div className="mx-auto lg:hidden">
+            <Image
+              src={Infographics}
+              className="rounded-xl"
+              alt="infographics-gif"
+            />
+          </div>
+
+          <div>
             <Card>
-              <CardHeader className="">
+              <CardHeader>
                 <CardTitle>
-                  <p className="text-center text-2xl">
-                    Make your Unstructured data ready for LLMs
+                  <p className="text-center lg:text-3xl text-4xl">
+                    Make your <br /> Unstructured data <br /> ready for LLMs
                   </p>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pl-8 pr-8">
-                <p className="text-md text-muted-foreground">
-                  dat moves your unstructured and semi-structured data and makes
-                  it accessible to any vector database & popular LLM frameworks.
+              <CardContent className="pl-5 text-base">
+                <p className="text-muted-foreground">
+                  <span className="font-[Comfortaa] text-black">dat </span>
+                  moves your unstructured and semi-structured data and makes it
+                  accessible to any vector database & popular LLM frameworks.
                 </p>
-                <ul className="list-disc ml-6 mt-4">
-                  <li className="text-md">Easy to use User Interface</li>
-                  <li className="text-md">Deploy on your own infra </li>
-                  <li className="text-md">Complete control over your data </li>
-                </ul>
+                <div className="flex flex-col space-y-4 mt-4">
+                  <div className="flex space-x-2">
+                    <img
+                      src="/assets/check_circle.svg"
+                      alt="Check"
+                      className="inline-block"
+                    />
+                    <p>Easy to use User Interface</p>
+                  </div>
+
+                  <div className="flex space-x-2">
+                    <img
+                      src="/assets/check_circle.svg"
+                      alt="Check"
+                      className="inline-block"
+                    />
+                    <p>Deploy on your own infra</p>
+                  </div>
+
+                  <div className="flex space-x-2">
+                    <img
+                      src="/assets/check_circle.svg"
+                      alt="Check"
+                      className="inline-block"
+                    />
+                    <p>Complete control over your data</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
-        <div className="lg:w-9/12 w-12/12 lg:pl-8 mt-6 lg:mt-0">
+
+        <div className="hidden lg:inline lg:w-8/12 w-full lg:pl-8 mt-6 lg:mt-0">
           <Image src={flow} className="rounded-xl" alt="flow-gif" />
         </div>
       </div>

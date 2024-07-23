@@ -7,6 +7,7 @@ import {
   Rupesh,
   Raghav,
   LinkedIn,
+  Shivam,
 } from "@/assets";
 import Link from "next/link";
 
@@ -54,7 +55,7 @@ const teamMember = [
     linkedInId: "https://www.linkedin.com/in/raaghav-gaur-b6637965/",
   },
   {
-    icon: Raghav,
+    icon: Shivam,
     name: "Shivam Kashyap",
     designation: "UX Designer",
     linkedInId: "https://www.linkedin.com/in/shivam-kashyap-326796147/",
@@ -63,7 +64,7 @@ const teamMember = [
 
 function MeetOurTeam() {
   return (
-    <div className="[background:#1F1F1F] text-white lg:p-3  p-6">
+    <div className="[background:#1F1F1F] text-white lg:p-3 p-6 lg:mx-0 mx-6">
       <div className="w-11/12 lg:w-8/12 mx-auto mt-4">
         <h2 className="text-white lg:text-6xl text-4xl font-bold mb-4">
           Meet our Team
