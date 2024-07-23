@@ -35,6 +35,7 @@ const UnStructuredLlms = () => {
           <Image
             src={flow}
             className="rounded-xl"
+            layout="responsive"
             alt="Gif showing a high level flow for dat."
           />
         </div>
