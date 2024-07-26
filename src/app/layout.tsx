@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TopNavigationBar from "@/components/client-components/top-navigation-bar";
 import Footer from "@/components/server-components/footer";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "dat website",
@@ -23,6 +24,7 @@ export default function RootLayout({
         </div>
         <div className="flex justify-center bg-gray-50 pb-20">{children}</div>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

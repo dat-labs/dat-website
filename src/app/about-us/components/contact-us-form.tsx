@@ -15,8 +15,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const FormElements = [
   {
@@ -49,7 +50,7 @@ const FormElements = [
   {
     type: "text",
     name: "designation",
-    label: "Designation (Title)",
+    label: "Designation (OPTIONAL)",
     description: "Please enter your designation.",
     placeholder: "Your current position in company",
     message: "Designation must be at least 2 characters.",
@@ -82,34 +83,73 @@ const FormSchema = z.object({
   email: z.string().email({
     message: "Enter a valid email address.",
   }),
-  company: z.string().min(2, {
-    message: "Company Name must be at least 2 characters.",
-  }),
-  description: z.string().min(2, {
-    message: "Description must be at least 2 characters.",
+  company: z
+    .string()
+    .min(2, {
+      message: "Company Name must be at least 2 characters.",
+    })
+    .nullable()
+    .optional(),
+  designation: z
+    .string()
+    .min(3, {
+      message: "Designation must be at least 3 characters.",
+    })
+    .nullable()
+    .optional(),
+  profile: z
+    .string()
+    .min(10, {
+      message: "LinkedIn Profile link must be at least 10 characters.",
+    })
+    .nullable()
+    .optional(),
+  description: z.string().min(10, {
+    message: "Description must be at least 10 characters.",
   }),
 });
+
+const defaultValues = {
+  full_name: "",
+  email: "",
+  company: undefined,
+  designation: undefined,
+  profile: undefined,
+  description: "",
+};
 
 export function ContactUsForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      full_name: "",
-      email: "",
-      company: "",
-      description: "",
-    },
+    defaultValues,
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+    var templateParams = {
+      email: data.email,
+      name: data.full_name,
+      company: data.company,
+      designation: data.designation,
+      linkedIn: data.profile,
+      subject: `Message from ${data.full_name}`,
+      message: data.description,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICEID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_CONTACT!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then((response) => {
+        toast.success("Message sent successfully!");
+        form.reset();
+      })
+      .catch((error) => {
+        toast.error("Message submission failed.");
+        console.log(error);
+      });
   }
 
   const renderFields = (field: any) => {
@@ -135,7 +175,7 @@ export function ContactUsForm() {
                   <Textarea
                     placeholder={field.placeholder}
                     className="resize-none"
-                    {...field}
+                    {...hookFormField}
                   />
                 )
               )}
