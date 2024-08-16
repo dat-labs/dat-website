@@ -1,10 +1,11 @@
 "use client";
 
+import { getIntegrations } from "@/app/integrations/api";
 import SearchDestinations from "@/components/client-components/integrations/search-destinations";
 import SearchGenerators from "@/components/client-components/integrations/search-generators";
 import SearchSources from "@/components/client-components/integrations/search-sources";
 import { Input } from "@/components/ui/input";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function SearchForIntegrations() {
   const [searchValue, setSearchValue] = React.useState("");
@@ -25,6 +26,14 @@ export default function SearchForIntegrations() {
       label: "Destinations",
     },
   ];
+  const [integrations, setIntegrations] = useState([]);
+  useEffect(() => {
+    const fetchIntegrations = async () => {
+      const data = await getIntegrations();
+      setIntegrations(data.pages);
+    };
+    fetchIntegrations();
+  }, []);
 
   return (
     <div className="mt-12">
@@ -57,7 +66,10 @@ export default function SearchForIntegrations() {
           selected === "All" || selected === "Sources" ? "block" : "hidden"
         } `}
       >
-        <SearchSources search={searchValue} />
+        <SearchSources
+          search={searchValue}
+          sourcesData={integrations.length > 0 ? integrations[0]?.pages : []}
+        />
       </div>
       <div
         id="Generators"
@@ -65,7 +77,10 @@ export default function SearchForIntegrations() {
           selected === "All" || selected === "Generators" ? "block" : "hidden"
         } `}
       >
-        <SearchGenerators search={searchValue} />
+        <SearchGenerators
+          search={searchValue}
+          generatorsData={integrations.length > 0 ? integrations[1]?.pages : []}
+        />
       </div>
       <div
         id="Destinations"
@@ -73,7 +88,12 @@ export default function SearchForIntegrations() {
           selected === "All" || selected === "Destinations" ? "block" : "hidden"
         } `}
       >
-        <SearchDestinations search={searchValue} />
+        <SearchDestinations
+          search={searchValue}
+          destinationsData={
+            integrations.length > 0 ? integrations[2]?.pages : []
+          }
+        />
       </div>
     </div>
   );
