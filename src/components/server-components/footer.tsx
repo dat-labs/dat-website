@@ -47,7 +47,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href={"https://discord.gg/En7TRBYE"}
+                href={"https://discord.gg/3Qr5dt39xH"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -146,7 +146,7 @@ const Footer = () => {
                 YouTube
               </Link>
               <Link
-                href={"https://discord.gg/En7TRBYE"}
+                href={"https://discord.gg/3Qr5dt39xH"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
