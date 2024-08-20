@@ -57,7 +57,7 @@ const Footer = () => {
                   aria-label="Go to the dat discord server"
                 />
               </Link>
-              <Link
+              {/* <Link
                 href={"https://youtube.com"}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -67,7 +67,7 @@ const Footer = () => {
                   role="img"
                   aria-label="Go to the dat youtube channel"
                 />
-              </Link>
+              </Link> */}
               {/* <Twitter
                 className="size-10"
                 role="img"
@@ -136,7 +136,7 @@ const Footer = () => {
               {/* <Link href={} className="text-muted-foreground text-md mt-3" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </Link> */}
-              <Link
+              {/* <Link
                 href={"https://www.youtube.com/"}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -144,7 +144,7 @@ const Footer = () => {
                 arai-label="Go to dat youtube"
               >
                 YouTube
-              </Link>
+              </Link> */}
               <Link
                 href={"https://discord.gg/En7TRBYE"}
                 target="_blank"
