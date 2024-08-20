@@ -75,10 +75,6 @@ const DatFlow = () => {
               STEP 1
             </p>
             <p className="text-3xl font-semibold mb-2">Connect</p>
-            <p className="text-md text-muted-foreground mb-2">
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
-            </p>
           </div>
 
           <div className="lg:w-6/12 lg:h-[450px] w-full lg:rotate-0 rotate-6">
@@ -105,10 +101,6 @@ const DatFlow = () => {
               STEP 2
             </p>
             <p className="text-3xl font-semibold mb-2">Embed</p>
-            <p className="text-md text-muted-foreground mb-2">
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
-            </p>
           </div>
 
           <div className="lg:w-6/12 h-full w-full px-4 lg:hidden">
@@ -132,10 +124,6 @@ const DatFlow = () => {
               STEP 3
             </p>
             <p className="text-3xl font-semibold mb-2">Store</p>
-            <p className="text-md text-muted-foreground mb-2">
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
-            </p>
           </div>
           <div className="flex flex-col justify-between lg:w-6/12 lg:h-[450px] m-auto">
             <Image
@@ -156,10 +144,6 @@ const DatFlow = () => {
               STEP 4
             </p>
             <p className="text-3xl font-semibold mb-4">Schedule and Monitor</p>
-            <p className="text-md text-muted-foreground mb-2">
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
-            </p>
           </div>
         </div>
       </div>
