@@ -10,7 +10,9 @@ function DontTakeOurWord() {
     <div className="lg:mt-24 mt-12 flex flex-col lg:flex-row w-full gap-5">
       <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
         <div className="flex flex-col ml-2 gap-4 mb-6">
-          <p className="text-4xl font-bold mr-5">Don't take our word for it</p>
+          <p className="text-4xl font-bold mr-5">
+            Don&apos;t take our word for it
+          </p>
           <p className="text-zinc-500 mr-10 text-xl">
             Why <span className="font-[Comfortaa] text-black">dat </span> ? Hear
             from hundreds of data teams & companies driving their business 10x
