@@ -12,7 +12,7 @@ const community = [
   {
     icon: DiscordBlueIcon,
     infoText: "Join our growing Discord community",
-    href: "https://discord.com/invite/En7TRBYE",
+    href: "https://discord.gg/3Qr5dt39xH",
   },
   {
     icon: MailBoxIcon,
