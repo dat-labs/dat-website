@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import TopNavigationBar from "@/components/client-components/top-navigation-bar";
 import Footer from "@/components/server-components/footer";
+import { clsx } from "clsx";
 import { Toaster } from "sonner";
 
+const dmSans = DM_Sans({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "dat website",
-  description: "dat website",
+  title: "Dat",
+  description: "Dat is a embedding generator and loading tool.",
 };
 
 export default function RootLayout({
@@ -16,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-dm-sans">
+      <body className={clsx(dmSans.className)}>
         <div className="border-b-2">
           <div className="w-full">
             <TopNavigationBar />

@@ -43,6 +43,7 @@ export default function SearchForIntegrations() {
           onChange={(e) => setSearchValue(e.target.value)}
           value={searchValue}
           placeholder="Search for any Source, Generator or Destination"
+          aria-label="Search for any Source, Generator or Destination"
         />
       </div>
 
@@ -68,7 +69,7 @@ export default function SearchForIntegrations() {
       >
         <SearchSources
           search={searchValue}
-          sourcesData={integrations.length > 0 ? integrations[0]?.pages : []}
+          sourcesData={integrations?.length > 0 ? integrations[0]?.pages : []}
         />
       </div>
       <div

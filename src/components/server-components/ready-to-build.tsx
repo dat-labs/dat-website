@@ -27,6 +27,7 @@ export default function ReadyToBuild() {
                 variant="outline"
                 className="text-[#020617] text-md"
                 size={"lg"}
+                aria-label="Try Dat. Go to the dat installation github repo."
               >
                 <span className="p-0.5 bg-black rounded-full mr-2">
                   <ArrowTopRightIcon className="h-5 w-5" color="white" />
@@ -51,6 +52,7 @@ export default function ReadyToBuild() {
                   src="https://cdn.icon-icons.com/icons2/2428/PNG/512/github_black_logo_icon_147128.png"
                   alt="github logo"
                   className="mr-3"
+                  aria-label="Try Dat. Go to the dat contribution github repo."
                 />
                 Github
               </Button>

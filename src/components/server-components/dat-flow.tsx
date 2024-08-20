@@ -37,7 +37,10 @@ const DatFlow = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline">
+            <Button
+              variant="outline"
+              aria-label="Go to the contribution github repo of dat."
+            >
               <GitHubLogoIcon className="mr-2 size-6" />
               <p className="font-semibold">Contribute to Project</p>
             </Button>
@@ -48,7 +51,7 @@ const DatFlow = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button>
+            <Button aria-label="Go to the installation github repo of dat.">
               <span className="bg-white rounded-full p-0.5 mr-2 my-auto">
                 <ArrowTopRightIcon color="black" />
               </span>
@@ -79,7 +82,11 @@ const DatFlow = () => {
           </div>
 
           <div className="lg:w-6/12 lg:h-[450px] w-full lg:rotate-0 rotate-6">
-            <ConnectImage className="size-11/12 m-auto" />
+            <ConnectImage
+              className="size-11/12 m-auto"
+              role="img"
+              aria-label="Step 1 of dat flow. Connect your source"
+            />
           </div>
         </div>
 
@@ -106,7 +113,12 @@ const DatFlow = () => {
 
           <div className="lg:w-6/12 h-full w-full px-4 lg:hidden">
             {isClient && (
-              <video autoPlay loop muted>
+              <video
+                autoPlay
+                loop
+                muted
+                aria-label="Video showing embedding generation"
+              >
                 <source src="/assets/dat.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
@@ -155,8 +167,16 @@ const DatFlow = () => {
         <p className="text-center text-3xl font-semibold">
           Logs, Advanced Scheduling & Last Run Status all in one
         </p>
-        <LogsAndSchedule className="lg:inline hidden w-full h-full mt-16" />
-        <LogsAndScheduleMobile className="lg:hidden w-full h-full mt-4" />
+        <LogsAndSchedule
+          role="img"
+          aria-label="Step 4 of dat flow. Schedule and monitor you connections for periodic generation and storing."
+          className="lg:inline hidden w-full h-full mt-16"
+        />
+        <LogsAndScheduleMobile
+          role="img"
+          aria-label="Step 4 of dat flow. Schedule and monitor you connections for periodic generation and storing."
+          className="lg:hidden w-full h-full mt-4"
+        />
       </div>
     </div>
   );

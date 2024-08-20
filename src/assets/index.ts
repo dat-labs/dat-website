@@ -37,3 +37,4 @@ export { default as Ankit } from "./images/ankit.svg";
 export { default as Rupesh } from "./images/rupesh.svg";
 export { default as Raghav } from "./images/raghav.svg";
 export { default as Shivam } from "./images/shivam.svg";
+export { default as YoutubeIcon } from "./images/youtube-icon.svg";

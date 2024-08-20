@@ -1,4 +1,4 @@
-import { DiscordBlueIcon, LinkedIn, LogoBlack, Twitter } from "@/assets";
+import { DiscordBlueIcon, LogoBlack, YoutubeIcon } from "@/assets";
 import Image from "next/image";
 import React from "react";
 import FooterDatLogoAsset from "@/assets/images/asset-footer.svg";
@@ -11,7 +11,11 @@ const Footer = () => {
       <div className="relative">
         <div className="absolute left-1/3 -top-5 ">
           <div className="lg:translate-x-36 -translate-x-10">
-            <FooterDatLogoAsset className="h-10" />
+            <FooterDatLogoAsset
+              className="h-10"
+              role="img"
+              aria-label="fotter dat logo asset"
+            />
           </div>
         </div>
       </div>
@@ -19,7 +23,11 @@ const Footer = () => {
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="lg:w-4/12 w-full mb-12 lg:mb-0 flex flex-col lg:mx-0 mx-2 lg:mb-0 mt-5">
             <Link href={"/"}>
-              <LogoBlack className="h-14 w-28 " />
+              <LogoBlack
+                className="h-14 w-28 "
+                role="img"
+                aria-label="dat logo"
+              />
             </Link>
 
             <p className="mt-6 text-muted-foreground lg:text-md text-sm w-11/12 lg:w-9/12">
@@ -32,17 +40,44 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHubLogoIcon className="size-10" />
+                <GitHubLogoIcon
+                  className="size-10"
+                  role="img"
+                  aria-label="Go to the dat github"
+                />
               </Link>
               <Link
                 href={"https://discord.gg/En7TRBYE"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <DiscordBlueIcon className="size-10" />
+                <DiscordBlueIcon
+                  className="size-10"
+                  role="img"
+                  aria-label="Go to the dat discord server"
+                />
               </Link>
-              <Twitter className="size-10" />
-              <LinkedIn className="size-10" />
+              <Link
+                href={"https://youtube.com"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <YoutubeIcon
+                  className="size-10"
+                  role="img"
+                  aria-label="Go to the dat youtube channel"
+                />
+              </Link>
+              {/* <Twitter
+                className="size-10"
+                role="img"
+                aria-label="Join dat at twitter"
+              />
+              <LinkedIn
+                className="size-10"
+                role="img"
+                aria-label="Join dat on youtube"
+              /> */}
             </div>
           </div>
 
@@ -52,18 +87,21 @@ const Footer = () => {
               <Link
                 href={"/integrations/#Sources"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the sources"
               >
                 Sources
               </Link>
               <Link
                 href={"/integrations/#Generators"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the Generators"
               >
                 Generators
               </Link>
               <Link
                 href={"/integrations/#Destination"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="View all the Destination"
               >
                 Destination
               </Link>
@@ -75,6 +113,7 @@ const Footer = () => {
                 className="text-muted-foreground text-md mt-3"
                 target="_blank"
                 rel="noopener noreferrer"
+                arai-label="View dat documentation"
               >
                 Documentation
               </Link>
@@ -90,6 +129,7 @@ const Footer = () => {
               <Link
                 href={"/about-us"}
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to the contact us page"
               >
                 Contact Us
               </Link>
@@ -101,6 +141,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to dat youtube"
               >
                 YouTube
               </Link>
@@ -109,6 +150,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to the dat discord"
               >
                 Discord
               </Link>
@@ -117,6 +159,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
+                arai-label="Go to dat github repo"
               >
                 GitHub
               </Link>

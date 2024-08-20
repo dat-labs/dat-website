@@ -23,6 +23,7 @@ const Conversation = () => {
                 href={"https://discord.gg/En7TRBYE"}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Join the discord channel for dat."
               >
                 <DiscordButton className="h-[42px] hover:opacity-90" />
               </Link>
@@ -31,6 +32,7 @@ const Conversation = () => {
                 href={"https://github.com/dat-labs/dat-main"}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Join the github for dat."
               >
                 <StarUsButton className="h-[42px] hover:opacity-90" />
               </Link>
@@ -41,6 +43,7 @@ const Conversation = () => {
                 href={"https://github.com/dat-labs/dat-main"}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Join the github for dat."
               >
                 <StarUsButton className="h-[42px] hover:opacity-90" />
               </Link>
@@ -48,6 +51,7 @@ const Conversation = () => {
                 href={"https://discord.gg/En7TRBYE"}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Join the discord channel for dat."
               >
                 <DiscordButton className="h-[42px] hover:opacity-90" />
               </Link>

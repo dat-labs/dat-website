@@ -84,6 +84,8 @@ const GettingStarted = () => {
                           width={950}
                           src={`/assets/Intro${index + 1}.png`}
                           alt={`Intro${index + 1}`}
+                          role="img"
+                          aria-label="Image of dat ui showing the connections list."
                         />
                       </CardContent>
                     </Card>

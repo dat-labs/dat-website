@@ -37,7 +37,10 @@ const DiversitySource = () => {
         <div className="flex flex-col w-full">
           <Link href={"/integrations"}>
             <div className="my-6 p-0.5 w-fit rounded-lg max-w-sm bg-gradient-to-r from-[#BDDFFF] via-[#CECCFF] to-[#FFCFD9]">
-              <Button variant="outline">
+              <Button
+                variant="outline"
+                aria-label="See all the connectors available in dat."
+              >
                 <ArrowTopRightIcon className="mr-2 size-5" />
                 <p className="font-semibold text-base">View All Connectors</p>
               </Button>

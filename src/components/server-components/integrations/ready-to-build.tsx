@@ -23,6 +23,7 @@ export default function ReadyToBuild() {
             variant="outline"
             className="text-[#020617] text-md"
             size={"lg"}
+            aria-label="Go to the dat installation repo"
           >
             <span className="p-0.5 bg-black rounded-full mr-2">
               <ArrowTopRightIcon className="h-5 w-5" color="white" />
@@ -40,6 +41,7 @@ export default function ReadyToBuild() {
             variant="outline"
             className="text-[#020617] text-md"
             size={"lg"}
+            aria-label="Go to the dat contribution repo"
           >
             <Image
               width={25}

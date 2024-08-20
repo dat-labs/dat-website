@@ -17,16 +17,7 @@ import { DiscordButton, DiscordIcon, LogoBlack } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import Image from "next/image";
 
 const navConfig = [
@@ -85,7 +76,11 @@ const TopNavigationBar = () => {
       <div className="w-11/12 lg:w-8/12">
         <div className="flex items-center justify-between px-4 py-2">
           <Link href="/">
-            <LogoBlack className="h-10 w-24" />
+            <LogoBlack
+              className="h-10 w-24"
+              role="img"
+              aria-label="dat logo in black"
+            />
           </Link>
 
           <div className="hidden lg:inline">
@@ -217,6 +212,7 @@ const TopNavigationBar = () => {
                       href={"https://datlabs.gitbook.io/datlabs"}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Join the dat discord."
                     >
                       <Button className="rounded">
                         <ArrowTopRightIcon className="mr-2" /> Documentation

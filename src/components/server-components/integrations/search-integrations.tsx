@@ -21,7 +21,11 @@ export default function SearchIntegrations() {
         <div className="flex lg:flex-row flex-col gap-3 mt-5">
           <RequestConnector />
           <Link href={"https://github.com/dat-labs/dat-main"} target="_blank">
-            <Button variant="secondary" className="lg:w-fit w-7/12">
+            <Button
+              variant="secondary"
+              className="lg:w-fit w-7/12"
+              aria-label="Go to github repo for connectors"
+            >
               <Image
                 width={25}
                 height={25}
@@ -35,7 +39,11 @@ export default function SearchIntegrations() {
         </div>
       </div>
       <div className="flex justify-center items-center lg:block hidden">
-        <IntegrationHeaderImage className="h-40" />
+        <IntegrationHeaderImage
+          className="h-40"
+          role="img"
+          aria-label="Connector asset image"
+        />
       </div>
     </div>
   );

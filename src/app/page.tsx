@@ -6,6 +6,18 @@ import GettingStarted from "@/components/server-components/getting-started";
 import Intro from "@/components/server-components/intro";
 import ReadyToBuild from "@/components/server-components/ready-to-build";
 import UnStructuredLlms from "@/components/server-components/unstructured-llms";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DAT - Landing Page",
+  description: "The official landing page for dat.",
+  openGraph: {
+    title: "DAT - Landing Page",
+    description: "The official landing page for dat.",
+    type: "website",
+    siteName: "Dat Website",
+  },
+};
 
 export default function Home() {
   return (
