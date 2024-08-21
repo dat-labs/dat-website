@@ -20,7 +20,7 @@ const Conversation = () => {
             </p>
             <div className="lg:space-x-4 hidden lg:flex">
               <Link
-                href={"https://discord.gg/En7TRBYE"}
+                href={"https://discord.gg/3Qr5dt39xH"}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Join the discord channel for dat."
@@ -48,7 +48,7 @@ const Conversation = () => {
                 <StarUsButton className="h-[42px] hover:opacity-90" />
               </Link>
               <Link
-                href={"https://discord.gg/En7TRBYE"}
+                href={"https://discord.gg/3Qr5dt39xH"}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Join the discord channel for dat."

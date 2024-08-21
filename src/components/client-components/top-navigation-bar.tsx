@@ -53,7 +53,7 @@ const navConfig = [
       },
       {
         title: "Discord",
-        href: "https://discord.gg/En7TRBYE",
+        href: "https://discord.gg/3Qr5dt39xH",
         description: "Join our Discord channel",
       },
     ],
@@ -150,7 +150,7 @@ const TopNavigationBar = () => {
                   </Button>
                 </Link>
                 <Link
-                  href={"https://discord.gg/En7TRBYE"}
+                  href={"https://discord.gg/3Qr5dt39xH"}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -219,7 +219,7 @@ const TopNavigationBar = () => {
                       </Button>
                     </Link>
                     <Link
-                      href={"https://discord.gg/En7TRBYE"}
+                      href={"https://discord.gg/3Qr5dt39xH"}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
