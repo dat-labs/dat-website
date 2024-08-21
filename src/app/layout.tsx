@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import TopNavigationBar from "@/components/client-components/top-navigation-bar";
@@ -20,6 +21,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NHM4FMFPM3`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-NHM4FMFPM3');
+        `}
+      </Script>
       <body className={clsx(dmSans.className)}>
         <div className="border-b-2">
           <div className="w-full">
