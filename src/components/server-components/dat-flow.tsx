@@ -25,7 +25,7 @@ const DatFlow = () => {
           <p className="text-3xl font-semibold">
             Open source and completely free to use
           </p>
-          <p className="lg:text-xl text-base text-muted-foreground mt-4 w-10/12 lg:w-full mx-auto lg:mx-0">
+          <p className="lg:text-lg text-base text-muted-foreground mt-4 w-10/12 lg:w-full mx-auto lg:mx-0">
             Address all your needs while retaining complete control over your
             data
           </p>
@@ -91,7 +91,7 @@ const DatFlow = () => {
         </div>
 
         <div className="flex items-center flex-wrap border-[#FFCFD9] border-r-4 border-b-4 rounded-br-3xl lg:border-none pb-12 lg:pb-0">
-          <div className="lg:w-6/12 lg:h-[450px] w-full lg:block hidden ">
+          <div className="lg:w-6/12 lg:h-[450px] w-full lg:block hidden lg:mt-4">
             {isClient && (
               <video autoPlay loop muted className="size-11/12 lg:m-auto pt-5">
                 <source src="/assets/dat.webm" type="video/webm" />

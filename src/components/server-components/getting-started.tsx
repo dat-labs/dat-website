@@ -65,38 +65,35 @@ const GettingStarted = () => {
         </div>
       </div>
       <div className="mt-16 p-6 pb-0 bg-[url('/assets/dat_connection_screen_bg.svg')] bg-cover rounded-md">
-        <div className=" lg:h-[662px] h-[208px] ">
-          <Carousel
-            plugins={[plugin.current]}
-            className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent className="m-0">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <CarouselItem key={index} className="p-0">
-                  <div>
-                    <Card className="rounded-bl-none rounded-br-none">
-                      <CardContent className="flex items-bottom justify-botom p-0 ">
-                        <Image
-                          objectFit="cover"
-                          height={950}
-                          width={950}
-                          src={`/assets/Intro${index + 1}.png`}
-                          alt={`Intro${index + 1}`}
-                          role="img"
-                          aria-label="Image of dat ui showing the connections list."
-                        />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            {/* <CarouselPrevious />
-          <CarouselNext /> */}
-          </Carousel>
-        </div>
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full h-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselContent className="m-0">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <CarouselItem key={index} className="p-0 w-auto h-auto">
+                <div>
+                  <Card className="rounded-bl-none rounded-br-none">
+                    <CardContent className="flex items-bottom justify-bottom p-0 h-[650px] w-full">
+                      <Image
+                        objectFit="cover"
+                        height={1000}
+                        width={1500}
+                        src={`/assets/Intro${index + 1}.png`}
+                        alt={`Intro${index + 1}`}
+                        role="img"
+                        aria-label="Image of dat ui showing the connections list."
+                        className="mx-auto"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
 
       {/* <p className="text-[10px] lg:text-base text-center font-semibold mt-6">
