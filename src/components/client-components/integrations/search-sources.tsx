@@ -33,7 +33,7 @@ export default function SearchSources({
               <div key={index} className="w-full lg:w-3/12 p-2">
                 <ActorCard
                   name={source.title}
-                  type={"DATABASE"}
+                  type={""}
                   icon={`/assets/integrations/${source.slug}.svg`}
                   isVerified={true}
                   path={source.path}

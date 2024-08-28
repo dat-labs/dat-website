@@ -47,7 +47,7 @@ const BuildWithData = () => {
         <div className="text-gray-900 font-dm-sans lg:text-7xl text-3xl font-bold leading-[113.495%]">
           Build something amazing with your data
         </div>
-        <div className="flex lg:flex-row flex-col items-center justify-between lg:mt-16 mt-12 lg:gap-0 gap-12">
+        <div className="flex lg:flex-row flex-col items-center justify-between lg:mt-16 lg:mx-auto mt-12 lg:gap-0 gap-12">
           {renderCommunity()}
         </div>
       </div>
