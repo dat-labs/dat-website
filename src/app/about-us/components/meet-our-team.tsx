@@ -70,7 +70,7 @@ function MeetOurTeam() {
           Meet our Team
         </h2>
         <h4 className="text-white lg:text-4xl text-2xl font-bold mb-4">
-          DAT Vision Statement
+          Vision
         </h4>
         <p className="text-lg text-zinc-400 mb-4">
           At DAT, our vision is to revolutionize the landscape of Generative AI
@@ -113,7 +113,6 @@ function MeetOurTeam() {
                   </Link>
                 </div>
                 <p className="mt-2">{member.name}</p>
-                <p>{member.designation}</p>
               </div>
             </div>
           ))}

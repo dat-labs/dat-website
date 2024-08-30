@@ -1,19 +1,23 @@
 import { GitHubLogoIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import { DiscordBlueIcon } from "@/assets";
+import { DiscordBlueIcon, YoutubeIcon } from "@/assets";
 import { MailBoxIcon } from "@/assets";
+import Link from "next/link";
 
 const community = [
   {
     icon: GitHubLogoIcon,
-    infoText: "Contribute on github",
+    infoText: "Contribute on Github",
+    href: "https://github.com/dat-labs/dat-main",
   },
   {
     icon: DiscordBlueIcon,
-    infoText: "Join our growing Slack community",
+    infoText: "Join our growing Discord community",
+    href: "https://discord.gg/3Qr5dt39xH",
   },
   {
-    icon: MailBoxIcon,
-    infoText: "Subscribe to our newsletter to stay up-to-date.",
+    icon: YoutubeIcon,
+    infoText: "Subscribe to our Youtube channel to stay up-to-date.",
+    href: "https://youtube.com/@mydatHub",
   },
 ];
 
@@ -27,7 +31,9 @@ const BuildWithData = () => {
             key={index}
           >
             <div className="flex items-center justify-center border shadow-lg size-36 rounded-[0.6875rem] border-[var(--Dimensions-px,]  border-zinc-500 bg-white">
-              <item.icon className="h-24 w-24" />
+              <Link href={item.href} target="_blank" rel="noopener noreferrer">
+                <item.icon className="h-24 w-24" />
+              </Link>
             </div>
             <p className="lg:w-58 w-10/12 lg:text-zinc-400 text-center font-dm-sans text-xl font-medium mt-8">
               {item.infoText}
