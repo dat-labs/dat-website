@@ -139,7 +139,7 @@ const DatFlow = () => {
           </div>
           <div className="flex flex-col justify-between lg:w-6/12 lg:h-[450px] m-auto">
             <Image
-              className="size-10/12 lg:size-8/12 m-auto rounded-xl"
+              className="size-10/12 lg:size-full m-auto rounded-xl"
               src={DatGif}
               alt="dat-gif"
             />

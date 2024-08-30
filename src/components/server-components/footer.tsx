@@ -58,7 +58,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href={"https://youtube.com"}
+                href={"https://youtube.com/@mydatHub"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -137,7 +137,7 @@ const Footer = () => {
                 LinkedIn
               </Link> */}
               <Link
-                href={"https://www.youtube.com/"}
+                href={"https://www.youtube.com/@mydatHub/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-md mt-3"
