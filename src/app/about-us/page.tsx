@@ -5,10 +5,10 @@ import MeetOurTeam from "./components/meet-our-team";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DAT - Abount Us",
+  title: "DAT - About Us",
   description: "Meet the dat team.",
   openGraph: {
-    title: "DAT - Abount Us",
+    title: "DAT - About Us",
     description: "Meet the dat team.",
     type: "website",
     siteName: "Dat Website",

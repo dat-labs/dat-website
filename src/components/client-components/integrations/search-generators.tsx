@@ -33,7 +33,7 @@ export default function SearchGenerators({
               <div key={index} className="w-full lg:w-3/12 p-2">
                 <ActorCard
                   name={generators.title}
-                  type={"DATABASE"}
+                  type={""}
                   icon={`/assets/integrations/${generators.slug}.svg`}
                   isVerified={true}
                   path={generators.path}

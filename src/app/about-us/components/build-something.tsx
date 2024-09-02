@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { GitHubLogoIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import { DiscordBlueIcon } from "@/assets";
+import { DiscordBlueIcon, YoutubeIcon } from "@/assets";
 import { MailBoxIcon } from "@/assets";
+import Link from "next/link";
 
 const community = [
   {
@@ -15,9 +16,9 @@ const community = [
     href: "https://discord.gg/3Qr5dt39xH",
   },
   {
-    icon: MailBoxIcon,
-    infoText: "Subscribe to our newsletter to stay up-to-date.",
-    href: "https://www.dat-hub.com",
+    icon: YoutubeIcon,
+    infoText: "Subscribe to our Youtube channel to stay up-to-date.",
+    href: "https://youtube.com/@mydatHub",
   },
 ];
 
@@ -33,7 +34,7 @@ const BuildWithData = () => {
             <div className="flex items-center justify-center border shadow-lg size-36 rounded-[0.6875rem] border-[var(--Dimensions-px,]  border-zinc-500 bg-white">
             <Link href={item.href} target="_blank" rel="noopener noreferrer">
               <item.icon className="h-24 w-24" />
-              </Link>
+            </Link>
             </div>
             <p className="lg:w-58 w-10/12 lg:text-zinc-400 text-center font-dm-sans text-xl font-medium mt-8">
               {item.infoText}
@@ -53,7 +54,7 @@ const BuildWithData = () => {
         <div className="text-gray-900 font-dm-sans lg:text-7xl text-3xl font-bold leading-[113.495%]">
           Build something amazing with your data
         </div>
-        <div className="flex lg:flex-row flex-col items-center justify-between lg:mt-16 mt-12 lg:gap-0 gap-12">
+        <div className="flex lg:flex-row flex-col items-center justify-between lg:mt-16 lg:mx-auto mt-12 lg:gap-0 gap-12">
           {renderCommunity()}
         </div>
       </div>

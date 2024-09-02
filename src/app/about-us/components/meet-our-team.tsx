@@ -69,16 +69,31 @@ function MeetOurTeam() {
         <h2 className="text-white lg:text-6xl text-4xl font-bold mb-4">
           Meet our Team
         </h2>
-        <h3 className="text-white lg:text-4xl text-2xl font-bold mb-4">
+        <h4 className="text-white lg:text-4xl text-2xl font-bold mb-4">
           Vision
-        </h3>
+        </h4>
         <p className="text-lg text-zinc-400 mb-4">
-          Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-          fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
-          elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
-          lectus. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos.
+          At DAT, our vision is to revolutionize the landscape of Generative AI
+          by ensuring that your AI initiatives are always production-ready. We
+          believe in the power of real-time, accurate data to fuel the next
+          generation of AI applications. Our open-source SaaS platform is
+          designed to keep your vector databases perpetually synchronized with
+          the latest changes in your source data, providing your AI models with
+          the most current and relevant context.
+        </p>
+        <p className="text-lg text-zinc-400 mb-4">
+          By bridging the gap between dynamic data sources and AI-driven
+          insights, we empower organizations to deliver precise, reliable, and
+          context-aware solutions. Whether you're building cutting-edge RAG
+          (Retrieval-Augmented Generation) applications or deploying large-scale
+          AI systems, DAT ensures that your AI models operate with the freshest
+          data, unlocking new levels of performance and accuracy.
+        </p>
+        <p className="text-lg text-zinc-400 mb-4">
+          Our mission is to make generative AI not just smart, but truly
+          intelligent—driven by data that reflects the present, not the past.
+          With DAT, your AI initiatives aren't just set for today—they're ready
+          for tomorrow.
         </p>
         <div className="grid lg:grid-cols-4 gap-4 p-8 text-zinc-400">
           {teamMember.map((member, index) => (
@@ -98,7 +113,6 @@ function MeetOurTeam() {
                   </Link>
                 </div>
                 <p className="mt-2">{member.name}</p>
-                <p>{member.designation}</p>
               </div>
             </div>
           ))}

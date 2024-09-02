@@ -19,10 +19,10 @@ const UnStructuredLlms = () => {
           </div>
 
           <div>
-            <Card>
+            <Card className="">
               <CardHeader>
                 <CardTitle>
-                  <p className="text-center lg:text-3xl text-4xl">
+                  <p className="text-center text-4xl lg:text-3xl xl:text-2xl">
                     Make your <br /> Unstructured data <br /> ready for LLMs
                   </p>
                 </CardTitle>

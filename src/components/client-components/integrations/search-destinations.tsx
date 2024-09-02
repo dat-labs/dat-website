@@ -34,7 +34,7 @@ export default function SearchDestinations({
               <div key={index} className="w-full lg:w-3/12 p-2">
                 <ActorCard
                   name={destination.title}
-                  type={"DATABASE"}
+                  type={""}
                   icon={`/assets/integrations/${destination.slug}.svg`}
                   isVerified={true}
                   path={destination.path}
