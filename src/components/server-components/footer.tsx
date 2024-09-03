@@ -109,7 +109,7 @@ const Footer = () => {
             <div className="lg:w-3/12 w-full flex flex-col">
               <p className="text-md font-semibold">RESOURCES</p>
               <Link
-                href={"https://datlabs.gitbook.io/datlabs"}
+                href={"https://docs.dat-hub.com"}
                 className="text-muted-foreground text-md mt-3"
                 target="_blank"
                 rel="noopener noreferrer"

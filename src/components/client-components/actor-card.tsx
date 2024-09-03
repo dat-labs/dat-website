@@ -34,10 +34,7 @@ export default function ActorCard({
             <p className="text-md ml-2">{name}</p>
           </div>
           <div>
-            <Link
-              href={`https://datlabs.gitbook.io/datlabs/${path}`}
-              target="_blank"
-            >
+            <Link href={`https://docs.dat-hub.com/${path}`} target="_blank">
               <ArrowTopRightIcon className="h-5 w-5" />
             </Link>
           </div>

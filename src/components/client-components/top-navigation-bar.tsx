@@ -141,7 +141,7 @@ const TopNavigationBar = () => {
               </NavigationMenuList>
               <div className="flex gap-4 ml-8">
                 <Link
-                  href={"https://datlabs.gitbook.io/datlabs"}
+                  href={"https://docs.dat-hub.com"}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -209,7 +209,7 @@ const TopNavigationBar = () => {
                   ></div>
                   <div className="flex gap-4 ml-8">
                     <Link
-                      href={"https://datlabs.gitbook.io/datlabs"}
+                      href={"https://docs.dat-hub.com/"}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Join the dat discord."
