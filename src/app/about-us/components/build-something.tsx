@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { GitHubLogoIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import { DiscordBlueIcon, YoutubeIcon } from "@/assets";
 import { MailBoxIcon } from "@/assets";
